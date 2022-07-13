@@ -38,7 +38,7 @@ ul {
 
 header {
   grid-area: header;
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -54,7 +54,7 @@ header nav i {
   font-size: 28px;
 }
 header nav button {
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
   border: none;
 }
 header nav .barra_navegacion, header nav .nav_rapida {
@@ -122,7 +122,7 @@ footer {
   grid-area: footer;
 }
 footer #footer_info {
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
   height: 180px;
   display: flex;
   justify-content: center;
@@ -179,11 +179,8 @@ footer #copyright_creditos {
   display: flex;
   gap: 20px;
 }
-#breadCrumb ul a {
-  text-decoration: none;
-}
 #breadCrumb ul a:hover {
-  color: rgb(255, 155, 23);
+  color: rgb(255, 214, 80);
 }
 
 .seccion_calzado, .seccion_verano, .seccion_accesorios, .seccion_invierno {
@@ -191,7 +188,7 @@ footer #copyright_creditos {
 }
 .seccion_calzado .title_calzado, .seccion_verano .title_calzado, .seccion_accesorios .title_calzado, .seccion_accesorios .title_accesorios, .seccion_invierno .title_calzado, .seccion_invierno .title_invierno {
   position: absolute;
-  color: rgb(255, 155, 23);
+  color: rgb(255, 214, 80);
   font-weight: bold;
   font-size: 150px;
   top: 50%;
@@ -227,7 +224,7 @@ footer #copyright_creditos {
   width: 400%;
 }
 .container-slider .slider h1 {
-  color: rgb(255, 155, 23);
+  color: rgb(255, 214, 80);
   position: absolute;
   top: 50%;
   left: 40%;
@@ -255,7 +252,7 @@ footer #copyright_creditos {
   transition: 0.25s;
 }
 .container-slider .slider__btn:hover {
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
   color: white;
   transition: 0.25s;
 }
@@ -263,32 +260,57 @@ footer #copyright_creditos {
   right: 0;
 }
 
+.title_slider {
+  max-width: 1920px;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+.title_slider::after {
+  content: " ";
+  position: absolute;
+  width: 24%;
+  height: 2px;
+  right: 0;
+  top: 50%;
+  background-color: rgb(255, 214, 80);
+}
+.title_slider h2 {
+  text-align: center;
+  font-size: 70px;
+  margin-top: 30px;
+}
+.title_slider h2::after {
+  content: " ";
+  position: absolute;
+  width: 24%;
+  height: 2px;
+  bottom: 21.5px;
+  left: 0;
+  background-color: rgb(255, 214, 80);
+  top: 50%;
+}
+
 .seccion_descuento {
   max-width: 1920px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding: 50px;
+  margin: 40px auto;
   width: 80%;
-  gap: 60px;
+  gap: 30px;
   justify-content: center;
   overflow: hidden;
   position: relative;
 }
-.seccion_descuento h2 {
-  text-align: center;
-  font-size: 70px;
-}
 .seccion_descuento .seccion_productos {
-  width: 90%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   gap: 50px;
   overflow: hidden;
-  padding: 10px 0 20px 0;
 }
-.seccion_descuento .producto, .seccion_descuento .container-productos .lista_productos .lista_productos-item, .container-productos .lista_productos .seccion_descuento .lista_productos-item {
+.seccion_descuento .producto {
+  border-bottom: rgb(255, 214, 80) 1px solid;
   position: relative;
   cursor: pointer;
   transition: 0.1s ease-out;
@@ -296,32 +318,29 @@ footer #copyright_creditos {
   text-decoration: none;
   color: black;
 }
-.seccion_descuento .producto:hover, .seccion_descuento .container-productos .lista_productos .lista_productos-item:hover, .container-productos .lista_productos .seccion_descuento .lista_productos-item:hover {
+.seccion_descuento .producto:hover {
   transition: 0.1s ease-in;
-  transform: translateY(-5px);
   box-shadow: 0 15px 10px lightgrey;
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
+  border-bottom: black solid 1px;
 }
-.seccion_descuento .producto:hover p, .seccion_descuento .container-productos .lista_productos .lista_productos-item:hover p, .container-productos .lista_productos .seccion_descuento .lista_productos-item:hover p, .seccion_descuento .producto:hover span, .seccion_descuento .container-productos .lista_productos .lista_productos-item:hover span, .container-productos .lista_productos .seccion_descuento .lista_productos-item:hover span {
+.seccion_descuento .producto:hover p, .seccion_descuento .producto:hover span {
   color: black;
 }
-.seccion_descuento .producto img, .seccion_descuento .container-productos .lista_productos .lista_productos-item img, .container-productos .lista_productos .seccion_descuento .lista_productos-item img {
+.seccion_descuento .producto img {
   width: 250px;
   height: 357px;
 }
-.seccion_descuento .producto .producto-info, .seccion_descuento .container-productos .lista_productos .lista_productos-item .producto-info, .container-productos .lista_productos .seccion_descuento .lista_productos-item .producto-info {
+.seccion_descuento .producto .producto-info {
   padding: 10px;
 }
-.seccion_descuento .producto .producto-info p, .seccion_descuento .container-productos .lista_productos .lista_productos-item .producto-info p, .container-productos .lista_productos .seccion_descuento .lista_productos-item .producto-info p {
-  margin-bottom: 10px;
-}
-.seccion_descuento .producto .producto-info span, .seccion_descuento .container-productos .lista_productos .lista_productos-item .producto-info span, .container-productos .lista_productos .seccion_descuento .lista_productos-item .producto-info span {
+.seccion_descuento .producto .producto-info span {
   font-size: 20px;
   margin-right: 10px;
   font-weight: bold;
   font-family: "Staatliches", cursive;
 }
-.seccion_descuento .producto .producto-info span::after, .seccion_descuento .container-productos .lista_productos .lista_productos-item .producto-info span::after, .container-productos .lista_productos .seccion_descuento .lista_productos-item .producto-info span::after {
+.seccion_descuento .producto .producto-info span::after {
   content: " ";
   position: absolute;
   width: 21%;
@@ -330,34 +349,34 @@ footer #copyright_creditos {
   left: 5.5px;
   background-color: rgb(219, 0, 0);
 }
-.seccion_descuento .producto .producto-info span::after:hover, .seccion_descuento .container-productos .lista_productos .lista_productos-item .producto-info span::after:hover, .container-productos .lista_productos .seccion_descuento .lista_productos-item .producto-info span::after:hover {
+.seccion_descuento .producto .producto-info span::after:hover {
   background-color: white;
 }
-.seccion_descuento .producto .producto-info .precio-descuento, .seccion_descuento .container-productos .lista_productos .lista_productos-item .producto-info .precio-descuento, .container-productos .lista_productos .seccion_descuento .lista_productos-item .producto-info .precio-descuento {
+.seccion_descuento .producto .producto-info .precio-descuento {
   color: rgb(219, 0, 0);
 }
 .seccion_descuento .btn {
   border: none;
-  height: 50px;
-  width: 50px;
-  font-size: 20px;
+  height: 110%;
+  width: 3%;
+  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  background-color: lightgrey;
+  background-color: transparent;
   transform: translateY(-50%);
   font-weight: bold;
   text-align: center;
-  border-radius: 50%;
   top: 55%;
   cursor: pointer;
   transition: 0.1s ease-out;
+  background-color: rgba(255, 255, 255, 0.466);
 }
 .seccion_descuento .btn:hover {
+  background-color: rgba(255, 214, 80, 0.466);
   transition: 0.1s ease-in;
-  background-color: rgb(255, 155, 23);
-  color: white;
+  color: black;
   transition: 0.1s;
 }
 .seccion_descuento .btn-left {
@@ -402,7 +421,7 @@ footer #copyright_creditos {
   outline: none;
   -webkit-appearance: none;
   cursor: pointer;
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
   padding: 5px;
   margin-bottom: 10px;
   border: black 2px solid;
@@ -422,15 +441,15 @@ footer #copyright_creditos {
   font-size: 18px;
   font-family: "Staatliches", cursive;
 }
-.container-productos .filtro_productos .container-categoria .producto, .container-productos .filtro_productos .container-categoria .lista_productos .lista_productos-item, .container-productos .lista_productos .filtro_productos .container-categoria .lista_productos-item {
+.container-productos .filtro_productos .container-categoria .producto {
   width: 20px;
 }
 .container-productos .filtro_productos .container-categoria a:hover {
-  color: rgb(255, 155, 23);
+  color: rgb(255, 214, 80);
 }
 .container-productos .filtro_productos .boton-aplicar {
   border: 2px solid black;
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
   width: 100%;
   padding: 10px;
   cursor: pointer;
@@ -440,32 +459,29 @@ footer #copyright_creditos {
   font-size: 20px;
 }
 .container-productos .lista_productos {
-  flex-direction: row;
   margin: 40px 0 40px 40px;
+  gap: 50px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-template-areas: repeat(5, auto);
   grid-template-areas: "item1 item2 item3 item4" "item5 item6 item7 item8" "item9 item10 item11 item12" "item13 item14 item15 item16";
-  gap: 50px;
 }
 .container-productos .lista_productos .lista_productos-item {
   cursor: pointer;
-  box-shadow: 0px 7.5px 5px lightgrey;
   transition: 0.1s ease-out;
+  border-bottom: rgb(255, 214, 80) 1px solid;
 }
 .container-productos .lista_productos .lista_productos-item:hover {
   transition: 0.1s ease-in;
-  transform: translateY(-5px);
-  box-shadow: 0 15px 10px lightgrey;
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
+  border-color: black;
 }
 .container-productos .lista_productos .lista_productos-item img {
   width: 250px;
   height: 357px;
-  padding-bottom: 5px;
 }
 .container-productos .lista_productos .lista_productos-item .producto-info {
-  margin: 10px;
+  padding: 10px;
 }
 .container-productos .lista_productos .lista_productos-item .producto-info span {
   font-size: 20px;
@@ -521,9 +537,7 @@ footer #copyright_creditos {
 #container_name-fav {
   display: flex;
   justify-content: space-between;
-}
-#container_name-fav p {
-  margin-bottom: 10px;
+  align-items: center;
 }
 #container_name-fav .container-hearts {
   cursor: auto;
@@ -578,7 +592,7 @@ footer #copyright_creditos {
   width: 100px;
   margin-right: 20px;
   font-size: 60px;
-  background-color: rgb(255, 155, 23);
+  background-color: rgb(255, 214, 80);
   padding: 20px 30px;
 }
 
@@ -596,7 +610,7 @@ footer #copyright_creditos {
   font-size: 20px;
 }
 .seccion_quienessomos .seccion_quienessomos-info p a:hover {
-  color: rgb(255, 155, 23);
+  color: rgb(255, 214, 80);
 }
 
 .seccion_info-producto {
