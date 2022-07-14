@@ -44,6 +44,7 @@ header {
   justify-content: center;
 }
 header nav {
+  max-width: 1920px;
   display: flex;
   justify-content: space-around;
   align-items: center;

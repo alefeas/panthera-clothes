@@ -36,6 +36,7 @@ a{
 ul{
     list-style: none;
 }
+
 //HEADER & FOOTER
 
 header{
@@ -45,6 +46,7 @@ header{
     display: flex;
     justify-content: center;
     nav{
+        max-width: 1920px;
         display: flex;
         justify-content: space-around;
         align-items: center;

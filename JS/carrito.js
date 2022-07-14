@@ -114,13 +114,15 @@ const show_cart = () =>{
     let total = 0;
     for (const element of cart){
         list += count++ + '- ' + element.name + '\n';
-        total+= element.price;
+        total+= parseInt(element.price*1.21);
     }
     if(total==0){
         alert('Su carrito esta vacío.');
     }
     else{
-        list+= 'El total a pagar es: $' + total + '.';
+        const iva = parseInt(total*0.21);
+        list+= 'El total a pagar es: $' + total + '.\n';
+        list+= 'IVA incluido: $' + iva + '.\n'; 
         alert(list);
     }
 }
