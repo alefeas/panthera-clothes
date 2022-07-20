@@ -33,6 +33,7 @@ a{
         transition: .25s;
     }
 }
+
 ul{
     list-style: none;
 }
@@ -46,7 +47,6 @@ header{
     display: flex;
     justify-content: center;
     nav{
-        max-width: 1920px;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -128,7 +128,6 @@ footer{
     grid-area: footer;
     #footer_info{
         background-color: $color-principal;
-        height: 180px;
         display: flex;
         justify-content: center;
         .container_span-footer{
@@ -139,7 +138,7 @@ footer{
         }
         .enlaces_info{
             height: 100%;
-            margin-top: 10px;
+            margin:15px 0 25px 0;
             margin-left: 20px;
             width: 25%;
             ul{
@@ -158,8 +157,7 @@ footer{
         }
         .redes{
             height: 100%;
-            margin-top: 10px;
-            margin-left: 20px;
+            margin:15px 0 25px 15px;
             width: 25%;
             ul{
                 display: flex;
@@ -326,7 +324,7 @@ footer{
     max-width: 1920px;
     display: flex;
     flex-direction: column;
-    margin: 40px auto;
+    margin: 40px auto 40px auto;
     width: 80%;
     gap: 30px;
     justify-content: center;
@@ -344,12 +342,12 @@ footer{
         position: relative;
         cursor: pointer;
         transition: .1s ease-out;
-        box-shadow:0 7.5px 5px lightgrey;
+        box-shadow:0 0 10px lightgrey;
         text-decoration: none;
         color: black;
         &:hover{
             transition: .1s ease-in;
-            box-shadow:0 15px 10px lightgrey;
+            box-shadow:0 0px 20px lightgrey;
             background-color: $color-principal;
             border-bottom: black solid 1px;
             p,span{
@@ -363,10 +361,10 @@ footer{
         .producto-info{
             padding: 10px;
             span{
-                font-size: 20px;
-                margin-right: 10px;
-                font-weight: bold;
-                font-family: $font-titles;
+            font-size: 20px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-family: $font-titles;
                 &::after{
                     content: ' ';
                     position: absolute;
@@ -401,7 +399,8 @@ footer{
         top:55%;
         cursor: pointer;
         transition: .1s ease-out;
-        background-color: rgba(255, 255, 255, 0.466);
+        color: transparent;
+        background-color:transparent;
         &:hover{
             background-color: rgba(255, 214, 80, 0.466);
             transition: .1s ease-in;
@@ -422,6 +421,7 @@ footer{
     width: 80%;
     margin: 0 auto;
     .filtro_productos{
+        margin-bottom: 40px;
         width: 20%;
         .title-filtro{
             font-size: 30px;
@@ -471,6 +471,14 @@ footer{
         }
         .container-categoria{
             @extend .rango-precio;
+            .categorias_item{
+                padding-top: 2px;
+                cursor: pointer;
+                transition: .25s;
+                &:hover{
+                    color: $color-principal;
+                }
+            }
             .producto{
                 width: 20px;
             }
@@ -493,21 +501,19 @@ footer{
         }
     }
     .lista_productos{
-        margin:40px 0 40px 40px;
+        margin:40px 0 40px 60px;
         gap: 50px;
-        display: grid;
-        grid-template-columns: repeat(4,auto);
-        grid-template-areas: repeat(5,auto);
-        grid-template-areas:
-        'item1 item2 item3 item4'
-        'item5 item6 item7 item8'
-        'item9 item10 item11 item12'
-        'item13 item14 item15 item16';
+        display: flex;
+        justify-content: left;
+        flex-wrap:wrap;
+        width: 80%;
         .lista_productos-item{
             cursor: pointer;
             transition: .1s ease-out;
             border-bottom: $color-principal 1px solid;
+            box-shadow:0 0 10px lightgrey;
             &:hover{
+                box-shadow:0 0 20px lightgrey;
                 transition: .1s ease-in;
                 background-color: $color-principal;
                 border-color: black;
@@ -518,6 +524,8 @@ footer{
             }
             .producto-info{
                 padding:10px;
+                display: flex;
+                flex-direction: column;
                 span{
                     font-size: 20px;
                     font-family: $font-titles;
@@ -525,75 +533,24 @@ footer{
                 }
             }
         }
-        .item1{
-            grid-area: item1;
-        }
-        .item2{
-            grid-area: item2;
-        }
-        .item3{
-            grid-area: item3;
-        }
-        .item4{
-            grid-area: item4;
-        }
-        .item5{
-            grid-area: item5;
-        }
-        .item6{
-            grid-area: item6;
-        }
-        .item7{
-            grid-area: item7;
-        }
-        .item8{
-            grid-area: item8;
-        }
-        .item9{
-            grid-area: item9;
-        }
-        .item10{
-            grid-area: item10;
-        }
-        .item11{
-            grid-area: item11;
-        }
-        .item12{
-            grid-area: item12;
-        }
-        .item13{
-            grid-area: item13;
-        }
-        .item14{
-            grid-area: item14;
-        }
-        .item15{
-            grid-area: item15;
-        }
     }
 }
 #container_name-fav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    .container-hearts{
-        cursor: auto;   
-    &:active{
-        #no-fav{
-            display: none;
-        }
-        #fav{
-            display: block;
-        }
+    p{
+        padding-bottom: 7.5px;
     }
-    #no-fav,#fav{
+    #btn_no-fav{
+        cursor: auto;   
+        padding:0 2px;
+        background-color: transparent;
+        border: none;
+    }
+    #no-fav{
         width: 20px;
         height: auto;
     }
-    #fav{
-        display: none;
-    }
-}
 }
 .container_title-outfits{
     max-width: 1920px;
