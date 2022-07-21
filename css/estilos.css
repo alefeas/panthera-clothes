@@ -160,7 +160,6 @@ footer #footer_info .redes ul i {
   font-size: 25px;
 }
 footer #copyright_creditos {
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -455,14 +454,14 @@ footer #copyright_creditos {
 .container-productos .filtro_productos .container-categoria a:hover {
   color: rgb(255, 214, 80);
 }
-.container-productos .filtro_productos .boton-aplicar {
+.container-productos .filtro_productos .boton-descartar {
   border: 2px solid black;
   background-color: rgb(255, 214, 80);
   width: 100%;
   padding: 10px;
   cursor: pointer;
 }
-.container-productos .filtro_productos .boton-aplicar span {
+.container-productos .filtro_productos .boton-descartar span {
   font-family: "Staatliches", cursive;
   font-size: 20px;
 }

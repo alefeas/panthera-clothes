@@ -4,72 +4,90 @@ const productsHombres = [
         name:'Remera Oversize.',
         price: 2990,
         page:'Hombres',
+        precioDesc:0,
         category:'Remeras',
         img:'../images/buzooversize.jpg',
+        slider:'no',
     },
     {
         id:2,
         name:'Chomba.',
         price: 2990,
+        precioDesc:2000,
         page:'Hombres',
         category:'Remeras',
         img:'../images/buzooversize.jpg',
+        slider:'si',
     },
     {
         id:3,
         name:'Buzo Canguro.',
         price: 2990,
+        precioDesc:0,
         page:'Hombres',
         category:'Buzos',
         img:'../images/buzooversize.jpg',
+        slider:'si',
     },
     {
         id:4,
         name:'Jean Elastizado.',
         price: 10990,
+        precioDesc:0,
         page:'Hombres',
         category:'Jeans',
         img:'../images/buzooversize.jpg',
+        slider:'si',
     },
     {
         id:5,
         name:'Chomba.',
         price: 2990,
+        precioDesc:0,
         page:'Hombres',
         category:'Remeras',
         img:'../images/buzooversize.jpg',
+        slider:'si',
     },
     {
         id:6,
         name:'Collar de Plata.',
         price: 2990,
+        precioDesc:0,
         page:'Hombres',
         category:'Accesorios',
         img:'../images/buzooversize.jpg',
+        slider:'si',
     },
     {
         id:7,
         name:'Chomba.',
         price: 2990,
+        precioDesc:0,
         page:'Hombres',
         category:'Remeras',
         img:'../images/buzooversize.jpg',
+        slider:'si',
     },
     {
         id:8,
         name:'Jean Oversize.',
         price: 2990,
+        precioDesc:0,
         page:'Hombres',
         category:'Jeans',
         img:'../images/buzooversize.jpg',
+        slider:'si',
     },
     {
         id:9,
         name:'Jogger de Jean.',
         price: 2990,
+        precioDesc:0,
         page:'Hombres',
         category:'Joggers',
         img:'../images/buzooversize.jpg',
+        slider:'si',
     },
 ]
 const productsMujeres = [
@@ -80,6 +98,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Buzos',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
     {
         id:2,
@@ -88,6 +107,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Joggers',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
     {
         id:3,
@@ -96,6 +116,7 @@ const productsMujeres = [
         page:'Mujeres',
         categoria:'Jeans',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
     
     {
@@ -105,6 +126,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Accesorios',
         img:'../images/camperablanca.jpg',
+        slider:'no',
     },
     {
         id:5,
@@ -113,6 +135,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Remeras',
         img:'../images/camperablanca.jpg',
+        slider:'no',
     },
     
     {
@@ -122,6 +145,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Buzos',
         img:'../images/camperablanca.jpg',
+        slider:'no',
     },
     {
         id:7,
@@ -130,6 +154,7 @@ const productsMujeres = [
         page:'Hombres',
         category:'Buzos',
         img:'../images/camperablanca.jpg',
+        slider:'no',
     },
     {
         id:8,
@@ -138,6 +163,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Joggers',
         img:'../images/camperablanca.jpg',
+        slider:'no',
     },
     {
         id:9,
@@ -146,6 +172,7 @@ const productsMujeres = [
         page:'Mujeres',
         categoria:'hogar',
         img:'../images/camperablanca.jpg',
+        slider:'no',
     },
     {
         id:10,
@@ -154,6 +181,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Jeans',
         img:'../images/camperablanca.jpg',
+        slider:'no',
     },
     {
         id:11,
@@ -162,6 +190,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Remeras',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
     {
         id:12,
@@ -170,15 +199,16 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Buzos',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
     {
         id:13,
         name:'Jogger de Jean.',
         price: 9990,
-        details:'hola capo',
         page:'Mujeres',
         category:'Joggers',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
     {
         id:14,
@@ -187,6 +217,7 @@ const productsMujeres = [
         page:'Mujeres',
         categoria:'Jeans',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
     {
         id:15,
@@ -195,6 +226,7 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Jeans',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
     {
         id:16,
@@ -203,8 +235,8 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Accesorios',
         img:'../images/camperablanca.jpg',
+        slider:'si',
     },
-    
     {
         id:17,
         name:'Buzo Oversize.',
@@ -212,6 +244,16 @@ const productsMujeres = [
         page:'Mujeres',
         category:'Buzos',
         img:'../images/camperablanca.jpg',
+        slider:'si',
+    },
+    {
+        id:18,
+        name:'Buzo Oversize.',
+        price: 8990,
+        page:'Mujeres',
+        category:'Buzos',
+        img:'../images/camperablanca.jpg',
+        slider:'si',
     },
 ]    
 const productsCalzado = [
@@ -222,6 +264,7 @@ const productsCalzado = [
         page:'Calzado',
         category:'Deportivo',
         img:'../images/zapatillas.jpg',
+        slider:'si',
     },
     {
         id:2,
@@ -230,6 +273,7 @@ const productsCalzado = [
         page:'Calzado',
         category:'Sandalias',
         img:'../images/zapatillas.jpg',
+        slider:'si',
     },
     {
         id:3,
@@ -238,6 +282,7 @@ const productsCalzado = [
         page:'Calzado',
         category:'Botas',
         img:'../images/zapatillas.jpg',
+        slider:'si',
     },
     {
         id:4,
@@ -246,6 +291,7 @@ const productsCalzado = [
         page:'Calzado',
         category:'Sneakers',
         img:'../images/zapatillas.jpg',
+        slider:'si',
     },
     {
         id:5,
@@ -254,6 +300,7 @@ const productsCalzado = [
         page:'Calzado',
         category:'Elegante',
         img:'../images/zapatillas.jpg',
+        slider:'si',
     },
 ]
 const productsConjuntos = [
@@ -264,6 +311,7 @@ const productsConjuntos = [
         page:'Conjuntos',
         category:'Deportivo',
         img:'../images/outfitvioleta.jpg',
+        slider:'si',
     },
     {
         id:2,
@@ -272,6 +320,7 @@ const productsConjuntos = [
         page:'Conjuntos',
         category:'Elegante',
         img:'../images/outfitvioleta.jpg',
+        slider:'si',
     },
     {
         id:3,
@@ -280,6 +329,7 @@ const productsConjuntos = [
         page:'Conjuntos',
         category:'Urbano',
         img:'../images/outfitvioleta.jpg',
+        slider:'si',
     },
     {
         id:4,
@@ -288,6 +338,7 @@ const productsConjuntos = [
         page:'Conjuntos',
         category:'Casual',
         img:'../images/outfitvioleta.jpg',
+        slider:'si',
     },
     {
         id:5,
@@ -296,5 +347,6 @@ const productsConjuntos = [
         page:'Conjuntos',
         category:'Aesthetic',
         img:'../images/outfitvioleta.jpg',
+        slider:'si',
     },
 ]
