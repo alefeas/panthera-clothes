@@ -1,0 +1,618 @@
+@import url("https://fonts.googleapis.com/css2?family=Stoke:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+#whatsapp {
+  position: fixed;
+  width: 80px;
+  right: 0;
+  bottom: 0;
+}
+
+h1, h2, h3 {
+  font-family: "Staatliches", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0.25s;
+}
+a:hover {
+  color: white;
+  transition: 0.25s;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(255, 214, 80);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 90%;
+}
+header nav i {
+  font-size: 28px;
+}
+header nav button {
+  background-color: rgb(255, 214, 80);
+  border: none;
+}
+header nav .barra_navegacion, header nav .nav_rapida {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-right: 20px;
+}
+header nav .barra_navegacion input, header nav .nav_rapida input {
+  border-radius: 5px;
+  height: 40px;
+  width: 400px;
+  outline: none;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+}
+header nav .barra_navegacion #header-search, header nav .nav_rapida #header-search {
+  width: 40px;
+  padding: 5px;
+  cursor: pointer;
+}
+header nav .nav_rapida {
+  gap: 30px;
+}
+header nav .nav_rapida a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+header nav .nav_rapida a .logo {
+  color: black;
+  font-size: 40px;
+  font-family: "Stoke", serif;
+}
+header nav .nav_rapida ul {
+  font-weight: bold;
+  display: flex;
+  gap: 25px;
+}
+header nav .nav_rapida ul li a {
+  font-size: 22px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+}
+header nav .nav_rapida ul li a:hover {
+  color: white;
+}
+header nav .carrito_user-favs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav .carrito_user-favs img {
+  width: 40px;
+  cursor: pointer;
+  padding: 5px;
+}
+header nav .carrito_user-favs img:hover {
+  color: white;
+}
+
+footer {
+  grid-area: footer;
+}
+footer #footer_info {
+  background-color: rgb(255, 214, 80);
+  display: flex;
+  justify-content: center;
+}
+footer #footer_info .container_span-footer {
+  border-bottom: 3px solid black;
+  margin-bottom: 5px;
+  font-size: 18px;
+  padding-bottom: 2px;
+}
+footer #footer_info .enlaces_info, footer #footer_info .contacto {
+  height: 100%;
+  margin: 15px 0 25px 0;
+  margin-left: 20px;
+  width: 25%;
+}
+footer #footer_info .enlaces_info ul, footer #footer_info .contacto ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer #footer_info .enlaces_info ul a i, footer #footer_info .contacto ul a i {
+  font-size: 12px;
+}
+footer #footer_info .redes {
+  height: 100%;
+  margin: 15px 0 25px 15px;
+  width: 25%;
+}
+footer #footer_info .redes ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+footer #footer_info .redes ul i {
+  font-size: 25px;
+}
+footer #copyright_creditos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+#breadCrumb {
+  display: flex;
+}
+#breadCrumb ul {
+  margin: 15px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+#breadCrumb ul a:hover {
+  color: rgb(255, 214, 80);
+}
+
+.seccion_calzado, .seccion_verano, .seccion_accesorios, .seccion_invierno {
+  position: relative;
+}
+.seccion_calzado .title_calzado, .seccion_verano .title_calzado, .seccion_accesorios .title_calzado, .seccion_accesorios .title_accesorios, .seccion_invierno .title_calzado, .seccion_invierno .title_invierno {
+  position: absolute;
+  color: rgb(255, 214, 80);
+  font-weight: bold;
+  font-size: 150px;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.seccion_calzado img, .seccion_verano img, .seccion_accesorios img, .seccion_invierno img {
+  width: 100%;
+  height: auto;
+}
+
+.seccion_invierno img {
+  width: 100%;
+}
+
+.container_title-outfits {
+  max-width: 2560px;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid black;
+}
+
+.container-slider {
+  max-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.container-slider .slider {
+  display: flex;
+  width: 400%;
+}
+.container-slider .slider h1 {
+  color: rgb(255, 214, 80);
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 150px;
+}
+.container-slider .slider .slider__img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.container-slider .slider__btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.531);
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.container-slider .slider__btn:hover {
+  background-color: rgb(255, 214, 80);
+  color: white;
+  transition: 0.25s;
+}
+.container-slider .slider__btn--right {
+  right: 0;
+}
+
+.title_slider {
+  max-width: 1920px;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+.title_slider::after {
+  content: " ";
+  position: absolute;
+  width: 24%;
+  height: 2px;
+  right: 0;
+  top: 50%;
+  background-color: rgb(255, 214, 80);
+}
+.title_slider h2 {
+  text-align: center;
+  font-size: 70px;
+  margin-top: 30px;
+}
+.title_slider h2::after {
+  content: " ";
+  position: absolute;
+  width: 24%;
+  height: 2px;
+  bottom: 21.5px;
+  left: 0;
+  background-color: rgb(255, 214, 80);
+  top: 50%;
+}
+
+.seccion_descuento {
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto 40px auto;
+  width: 80%;
+  gap: 30px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.seccion_descuento .seccion_productos {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 50px;
+  overflow: hidden;
+}
+.seccion_descuento .btn {
+  border: none;
+  height: 110%;
+  width: 3%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: transparent;
+  transform: translateY(-50%);
+  font-weight: bold;
+  text-align: center;
+  top: 55%;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  color: transparent;
+  background-color: transparent;
+}
+.seccion_descuento .btn:hover {
+  background-color: rgba(255, 214, 80, 0.466);
+  transition: 0.1s ease-in;
+  color: black;
+  transition: 0.1s;
+}
+.seccion_descuento .btn-left {
+  left: 0;
+}
+.seccion_descuento .btn-right {
+  right: 0;
+}
+
+.producto {
+  border-bottom: rgb(255, 214, 80) 1px solid;
+  position: relative;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  box-shadow: 0 0 10px lightgrey;
+  text-decoration: none;
+  color: black;
+}
+.producto:hover {
+  transition: 0.1s ease-in;
+  box-shadow: 0 0px 20px lightgrey;
+  background-color: rgb(255, 214, 80);
+  border-bottom: black solid 1px;
+}
+.producto:hover p, .producto:hover span {
+  color: black;
+}
+.producto .img-producto {
+  width: 250px;
+  height: 357px;
+}
+.producto .producto-info {
+  padding: 10px;
+}
+.producto .producto-info .precio-sin-desc {
+  text-decoration: line-through rgb(219, 0, 0);
+}
+.producto .producto-info span {
+  font-size: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-family: "Staatliches", cursive;
+}
+.producto .producto-info .precio-descuento {
+  color: rgb(219, 0, 0);
+}
+.producto .producto-info .btn_agregar_carrito {
+  border: none;
+  background-color: transparent;
+  padding: 0 2px;
+}
+.producto .producto-info .img_agregar_carrito {
+  width: 20px;
+  height: auto;
+}
+
+.container-productos {
+  display: flex;
+  max-width: 1920px;
+  width: 80%;
+  margin: 0 auto;
+}
+.container-productos .filtro_productos {
+  position: sticky;
+  margin-bottom: 40px;
+  width: 20%;
+}
+.container-productos .filtro_productos .title-filtro {
+  font-size: 30px;
+  margin: 20px 0 20px 0;
+  border-bottom: 3px black solid;
+  padding-top: 10px;
+}
+.container-productos .filtro_productos .rango-precio, .container-productos .filtro_productos .container-categoria {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+  border-bottom: 3px solid black;
+  margin-bottom: 20px;
+}
+.container-productos .filtro_productos .rango-precio span, .container-productos .filtro_productos .container-categoria span {
+  font-family: "Staatliches", cursive;
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+.container-productos .filtro_productos .rango-precio p, .container-productos .filtro_productos .container-categoria p {
+  font-size: 25px;
+  margin: 5px 0;
+}
+.container-productos .filtro_productos .rango-precio #input_rango-precio, .container-productos .filtro_productos .container-categoria #input_rango-precio {
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-color: rgb(255, 214, 80);
+  padding: 5px;
+  margin-bottom: 10px;
+  border: black 2px solid;
+}
+.container-productos .filtro_productos .rango-precio #input_rango-precio::-webkit-slider-thumb, .container-productos .filtro_productos .container-categoria #input_rango-precio::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.container-productos .filtro_productos .container_number-price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px;
+}
+.container-productos .filtro_productos .container_number-price input {
+  width: 40%;
+  outline: none;
+  font-size: 18px;
+  font-family: "Staatliches", cursive;
+}
+.container-productos .filtro_productos .container-categoria .categorias_item {
+  padding-top: 2px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.container-productos .filtro_productos .container-categoria .categorias_item:hover {
+  color: rgb(255, 214, 80);
+}
+.container-productos .filtro_productos .container-categoria .producto {
+  width: 20px;
+}
+.container-productos .filtro_productos .container-categoria a:hover {
+  color: rgb(255, 214, 80);
+}
+.container-productos .filtro_productos .boton-descartar {
+  border: 2px solid black;
+  background-color: rgb(255, 214, 80);
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.container-productos .filtro_productos .boton-descartar span {
+  font-family: "Staatliches", cursive;
+  font-size: 20px;
+}
+.container-productos #lista_productos {
+  margin: 40px 0 40px 60px;
+  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.container_price-agregar {
+  font-size: "Staatliches", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_price-agregar span {
+  font-size: 20px;
+  font-family: "Staatliches", cursive;
+  font-weight: bold;
+}
+.container_price-agregar .btn_agregar_carrito {
+  border: none;
+  background-color: transparent;
+  padding: 0 2px;
+}
+.container_price-agregar .img_agregar_carrito {
+  width: 20px;
+  height: auto;
+}
+
+.porc-descuento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(255, 214, 80);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+.porc-descuento span {
+  font-size: 20px;
+  font-family: "Staatliches", cursive;
+}
+
+#container_name-fav {
+  display: flex;
+  justify-content: space-between;
+}
+#container_name-fav p {
+  padding-bottom: 7.5px;
+}
+#container_name-fav #btn_no_fav {
+  cursor: auto;
+  padding: 0 2px;
+  background-color: transparent;
+  border: none;
+}
+#container_name-fav #no-fav {
+  width: 20px;
+  height: auto;
+}
+
+.container_title-outfits {
+  max-width: 1920px;
+}
+
+.title_tuto-compra, .title_carrito, .seccion_quienessomos-titulo {
+  border-bottom: 3px black solid;
+  margin: 10px 20px;
+  padding: 5px 0;
+  font-size: 30px;
+}
+
+.seccion_tuto-compra .container_tuto-pasos h2 {
+  margin: 20px 30px;
+  font-size: 26px;
+}
+.seccion_tuto-compra .container_tuto-pasos .container-paso {
+  margin: 30px;
+  display: flex;
+}
+.seccion_tuto-compra .container_tuto-pasos .container-paso .text_paso-title {
+  margin: 5px;
+  font-size: 20px;
+}
+.seccion_tuto-compra .container_tuto-pasos .container-paso .text_paso-parrafo {
+  margin: 5px;
+}
+.seccion_tuto-compra .container_tuto-pasos .container-paso .paso-num {
+  font-family: "Staatliches", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+  font-size: 60px;
+  background-color: rgb(255, 214, 80);
+  padding: 20px 30px;
+}
+
+.seccion_quienessomos .seccion_quienessomos-info {
+  display: flex;
+}
+.seccion_quienessomos .seccion_quienessomos-info img {
+  width: 50%;
+  margin: 20px 30px;
+}
+.seccion_quienessomos .seccion_quienessomos-info p {
+  line-height: 45px;
+  text-align: justify;
+  margin: 20px 30px 0 0;
+  font-size: 20px;
+}
+.seccion_quienessomos .seccion_quienessomos-info p a:hover {
+  color: rgb(255, 214, 80);
+}
+
+.seccion_info-producto {
+  width: 80%;
+  border: red solid 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.seccion_info-producto .imagenes-producto .img-producto {
+  width: 400px;
+}
+
+#carrito {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 80%;
+}
+
+#producto_carrito {
+  margin: 0 auto;
+  display: flex;
+}
+
+#total_carrito {
+  border: 1px solid red;
+  width: 202px;
+}
+
+/*# sourceMappingURL=estilso.css.map */

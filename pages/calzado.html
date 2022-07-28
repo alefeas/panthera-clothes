@@ -33,8 +33,9 @@
                 <button>
                     <img src="../images/heart.svg" alt="">
                 </button>
-                <button>
+                <button><a href="../pages/carrito.html">
                     <img src="../images/shopping-bag.svg" alt="">
+                </a>
                 </button>
             </div>
         </nav>
@@ -55,8 +56,10 @@
             <h2>¡NUEVOS MODELOS!</h2>
         </div>
         <section class="seccion_descuento">
-            <div class="seccion_productos" id="sliderCalzado" class="glider">
+            <div class="seccion_productos" id="sliderProducts" class="glider">
             </div>
+            <button class="btn btn-right"><i class="fa-solid fa-chevron-right glider-next"></i></button>
+            <button class="btn btn-left glider-prev"><i class="fa-solid fa-chevron-left"></i></button>
         </section>
         <div class="container_title-outfits">
             <h2>CALZADO</h2>
@@ -85,7 +88,7 @@
                 </div>
                 <button class="boton-descartar" id="botonDescartarCambiosCalzado"><span>DESCARTAR CAMBIOS</span></button>
             </aside>
-            <section class="lista_productos" id="listaProductosCalzado">
+            <section  id="lista_productos">
             </section>
         </section>
     </main>
@@ -131,7 +134,8 @@
     </footer>
     <a href=""><img src="../images/whatsapp.png" alt="WhatsApp" id="whatsapp"></a>
     <script src="../JS/bd.js"></script>
-    <script src="../JS/filtrosCalzado.js"></script>
-    <script src="../JS/productosSliderCalzado.js"></script>
+    <script src="../JS/variables_funciones_filtros.js"></script>
+    <script src="../JS/mostrarCalzado.js"></script>
+    <script src="../JS/carrito.js"></script>
 </body>
 </html>

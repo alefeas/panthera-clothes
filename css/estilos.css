@@ -260,7 +260,7 @@ footer #copyright_creditos {
 .title_slider {
   max-width: 1920px;
   position: relative;
-  width: 80%;
+  width: 1400px;
   margin: 0 auto;
 }
 .title_slider::after {
@@ -293,7 +293,7 @@ footer #copyright_creditos {
   display: flex;
   flex-direction: column;
   margin: 40px auto 40px auto;
-  width: 80%;
+  width: 1400px;
   gap: 30px;
   justify-content: center;
   overflow: hidden;
@@ -305,52 +305,6 @@ footer #copyright_creditos {
   margin: 0 auto;
   gap: 50px;
   overflow: hidden;
-}
-.seccion_descuento .producto {
-  border-bottom: rgb(255, 214, 80) 1px solid;
-  position: relative;
-  cursor: pointer;
-  transition: 0.1s ease-out;
-  box-shadow: 0 0 10px lightgrey;
-  text-decoration: none;
-  color: black;
-}
-.seccion_descuento .producto:hover {
-  transition: 0.1s ease-in;
-  box-shadow: 0 0px 20px lightgrey;
-  background-color: rgb(255, 214, 80);
-  border-bottom: black solid 1px;
-}
-.seccion_descuento .producto:hover p, .seccion_descuento .producto:hover span {
-  color: black;
-}
-.seccion_descuento .producto img {
-  width: 250px;
-  height: 357px;
-}
-.seccion_descuento .producto .producto-info {
-  padding: 10px;
-}
-.seccion_descuento .producto .producto-info span {
-  font-size: 20px;
-  margin-right: 10px;
-  font-weight: bold;
-  font-family: "Staatliches", cursive;
-}
-.seccion_descuento .producto .producto-info span::after {
-  content: " ";
-  position: absolute;
-  width: 21%;
-  height: 2px;
-  bottom: 21.5px;
-  left: 5.5px;
-  background-color: rgb(219, 0, 0);
-}
-.seccion_descuento .producto .producto-info span::after:hover {
-  background-color: white;
-}
-.seccion_descuento .producto .producto-info .precio-descuento {
-  color: rgb(219, 0, 0);
 }
 .seccion_descuento .btn {
   border: none;
@@ -384,15 +338,64 @@ footer #copyright_creditos {
   right: 0;
 }
 
+.producto {
+  width: 250px;
+  height: 435px;
+  border-bottom: rgb(255, 214, 80) 1px solid;
+  position: relative;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  box-shadow: 0 0 10px lightgrey;
+  text-decoration: none;
+  color: black;
+}
+.producto:hover {
+  transition: 0.1s ease-in;
+  box-shadow: 0 0px 20px lightgrey;
+  background-color: rgb(255, 214, 80);
+  border-bottom: black solid 1px;
+}
+.producto:hover p, .producto:hover span {
+  color: black;
+}
+.producto .img-producto {
+  width: 100%;
+  height: 357px;
+}
+.producto .producto-info {
+  padding: 10px;
+}
+.producto .producto-info .precio-sin-desc {
+  text-decoration: line-through rgb(219, 0, 0);
+}
+.producto .producto-info span {
+  font-size: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-family: "Staatliches", cursive;
+}
+.producto .producto-info .precio-descuento {
+  color: rgb(219, 0, 0);
+}
+.producto .producto-info .btn_agregar_carrito {
+  border: none;
+  background-color: transparent;
+  padding: 0 2px;
+}
+.producto .producto-info .img_agregar_carrito {
+  width: 20px;
+  height: auto;
+}
+
 .container-productos {
   display: flex;
   max-width: 1920px;
-  width: 80%;
+  width: 1400px;
   margin: 0 auto;
 }
 .container-productos .filtro_productos {
-  margin-bottom: 40px;
   width: 20%;
+  margin-bottom: 40px;
 }
 .container-productos .filtro_productos .title-filtro {
   font-size: 30px;
@@ -465,39 +468,50 @@ footer #copyright_creditos {
   font-family: "Staatliches", cursive;
   font-size: 20px;
 }
-.container-productos .lista_productos {
+.container-productos #lista_productos {
   margin: 40px 0 40px 60px;
-  gap: 50px;
+  gap: 20px;
   display: flex;
-  justify-content: left;
   flex-wrap: wrap;
   width: 80%;
 }
-.container-productos .lista_productos .lista_productos-item {
-  cursor: pointer;
-  transition: 0.1s ease-out;
-  border-bottom: rgb(255, 214, 80) 1px solid;
-  box-shadow: 0 0 10px lightgrey;
-}
-.container-productos .lista_productos .lista_productos-item:hover {
-  box-shadow: 0 0 20px lightgrey;
-  transition: 0.1s ease-in;
-  background-color: rgb(255, 214, 80);
-  border-color: black;
-}
-.container-productos .lista_productos .lista_productos-item img {
-  width: 250px;
-  height: 357px;
-}
-.container-productos .lista_productos .lista_productos-item .producto-info {
-  padding: 10px;
+
+.container_price-agregar {
+  font-size: "Staatliches", cursive;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.container-productos .lista_productos .lista_productos-item .producto-info span {
+.container_price-agregar span {
   font-size: 20px;
   font-family: "Staatliches", cursive;
   font-weight: bold;
+}
+.container_price-agregar .btn_agregar_carrito {
+  border: none;
+  background-color: transparent;
+  padding: 0 2px;
+}
+.container_price-agregar .img_agregar_carrito {
+  width: 20px;
+  height: auto;
+}
+
+.porc-descuento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(255, 214, 80);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+.porc-descuento span {
+  font-size: 20px;
+  font-family: "Staatliches", cursive;
 }
 
 #container_name-fav {
@@ -507,7 +521,7 @@ footer #copyright_creditos {
 #container_name-fav p {
   padding-bottom: 7.5px;
 }
-#container_name-fav #btn_no-fav {
+#container_name-fav #btn_no_fav {
   cursor: auto;
   padding: 0 2px;
   background-color: transparent;
@@ -520,9 +534,10 @@ footer #copyright_creditos {
 
 .container_title-outfits {
   max-width: 1920px;
+  width: 1400px;
 }
 
-.title_tuto-compra, .seccion_quienessomos-titulo {
+.title_tuto-compra, .title_carrito, .seccion_quienessomos-titulo {
   border-bottom: 3px black solid;
   margin: 10px 20px;
   padding: 5px 0;
@@ -583,6 +598,115 @@ footer #copyright_creditos {
 }
 .seccion_info-producto .imagenes-producto .img-producto {
   width: 400px;
+}
+
+.title_carrito {
+  font-size: 45px;
+  margin-top: 0;
+}
+
+#carrito {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  margin: 0 auto;
+  gap: 30px;
+}
+#carrito #total_carrito {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 275px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+#carrito #total_carrito .resumen_carrito {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#carrito #total_carrito .precio_envio, #carrito #total_carrito .precio_total {
+  display: flex;
+  justify-content: space-between;
+}
+#carrito #total_carrito h3 {
+  font-size: 26px;
+}
+#carrito #total_carrito span {
+  font-size: 22px;
+  font-family: "Staatliches", cursive;
+}
+#carrito #total_carrito button {
+  border: 2px solid black;
+  background-color: rgb(255, 214, 80);
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 22px;
+  font-family: "Staatliches", cursive;
+}
+#carrito img {
+  height: 275px;
+}
+#carrito #lista_carrito {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#carrito #lista_carrito #producto_carrito {
+  width: 100%;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+#carrito #lista_carrito .container_carrito-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+#carrito #lista_carrito .container_carrito-info div {
+  font-size: 20px;
+  margin: 24px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#carrito #lista_carrito .container_carrito-info div .name_producto-carrito {
+  font-size: 30px;
+  font-family: "Staatliches", cursive;
+}
+#carrito #lista_carrito .container_carrito-info div .precio_producto-carrito {
+  font-size: 22px;
+}
+#carrito #lista_carrito .container_carrito-info div .precio_producto-carrito span {
+  font-family: "Staatliches", cursive;
+}
+#carrito #lista_carrito .container_carrito-info div .color_producto-carrito {
+  font-size: 20px;
+}
+#carrito #lista_carrito .container_carrito-info div .talle_producto-carrito {
+  font-size: 20px;
+}
+
+.img_metodos-pago {
+  width: 660px;
+}
+
+.btn_eliminar-producto {
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  height: 20px;
+  margin: 0 0 0 auto;
+}
+
+#input_cantidad_prod {
+  padding: 5px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
