@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-$color-principal:rgb(255, 214, 80);
+$color-principal:#d3b246;
 $font-logo: 'Stoke', serif;
 $font-titles: 'Staatliches', cursive;
 $font-info: 'Raleway', sans-serif;  
@@ -36,7 +36,10 @@ a{
 ul{
     list-style: none;
 }
-
+button{
+    background-color: transparent;
+    border: none;
+}
 //HEADER & FOOTER
 
 header{
@@ -337,7 +340,6 @@ footer{
         overflow: hidden;
     }
     .btn{
-        border: none;
         height: 110%;
         width: 3%;
         font-size: 30px;
@@ -345,15 +347,11 @@ footer{
         align-items: center;
         justify-content: center;
         position: absolute;
-        background-color: transparent;
         transform: translateY(-50%);
-        font-weight: bold;
-        text-align: center;
         top:55%;
         cursor: pointer;
         transition: .1s ease-out;
         color: transparent;
-        background-color:transparent;
         &:hover{
             background-color: rgba(255, 214, 80, 0.466);
             transition: .1s ease-in;
@@ -394,7 +392,7 @@ footer{
     .producto-info{
         padding: 10px;
         .precio-sin-desc{
-            text-decoration:line-through rgb(219, 0, 0);
+            text-decoration:line-through #db0000;
         }
         span{
             font-size: 20px;
@@ -406,8 +404,6 @@ footer{
             color: rgb(219, 0, 0);  
         }
         .btn_agregar_carrito{
-            border: none;         
-            background-color: transparent;    
             padding:0 2px;           
         }
         .img_agregar_carrito{
@@ -520,8 +516,6 @@ footer{
         font-weight: bold;
     }
     .btn_agregar_carrito{
-        border: none;         
-        background-color: transparent;    
         padding:0 2px;           
     }
     .img_agregar_carrito{
@@ -554,8 +548,6 @@ footer{
     #btn_no_fav{
         cursor: auto;   
         padding:0 2px;
-        background-color: transparent;
-        border: none;
     }
     #no-fav{
         width: 20px;
@@ -659,6 +651,20 @@ footer{
     @extend .title_tuto-compra;
     font-size: 45px;
     margin-top: 0;
+    #burbujaCarrito{
+        font-family: $font-titles;
+    }
+}
+#trash{
+    position: absolute;
+    font-size: 30px;
+    right: 45px;
+    top: 150px;
+    cursor: pointer;
+    font-family: $font-titles;
+    &:hover{
+        color: #db0000;
+    }
 }
 #carrito{  
     display: flex;
@@ -713,50 +719,70 @@ footer{
             display: flex;
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
+        .btn_eliminar-producto{
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            height: 20px;
+            margin: 0 0 0 auto;
+        }
         .container_carrito-info{
             position: relative;
             display: flex;
             justify-content: space-between;
+            .container_btn-cant{
+                display: flex;
+                cursor: pointer;
+                .btn_cant{
+                    padding:0 10px;
+                    font-size: 18px;
+                    position: absolute;
+                    left:72.5%;
+                    &:hover{
+                        color: $color-principal;
+                    }
+                }
+                .btn_cant-inc{
+                    top: 33%;
+                }
+                .btn_cant-rest{
+                    top: 39%;
+                }
+            }
+            
             div{
                 font-size: 20px;
-                margin: 24px 20px 20px 20px;
+                margin: 20px 5px 20px 10px;
                 display: flex;
                 flex-direction: column; 
                 justify-content: space-between;
+                #input_cantidad_prod{
+                    font-family: $font-titles;
+                    font-size: 20px;
+                    text-align: center;
+                    width: 20%;
+                    padding-left: 12.5px;
+                }
                 .name_producto-carrito{
                     font-size: 30px;
                     font-family: $font-titles;
                 }
                 .precio_producto-carrito{
-                    font-size: 22px;
                     span{
+                        font-size: 22px;
                         font-family: $font-titles;
                     }
                 }
-                .color_producto-carrito{
-                    font-size: 20px;
-                }
                 .talle_producto-carrito{
-                    font-size: 20px;
+                    select,option{
+                        font-family: $font-titles;
+                        padding-left: 5px;
+                        font-size: 20px;
+                    }
                 }
             }
         }
     }
-}
-.img_metodos-pago{
-    width:660px;
-}
-.btn_eliminar-producto{
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color: transparent;
-    border: none;
-    height: 20px;
-    margin: 0 0 0 auto;
-}
-#input_cantidad_prod{
-    padding: 5px;
 }

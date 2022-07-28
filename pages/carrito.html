@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,8 @@
     <title>Carrito | Panthera</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <header>
@@ -35,6 +37,7 @@
                 </button>
                 <button><a href="../pages/carrito.html">
                     <img src="../images/shopping-bag.svg" alt="">
+                    <span id="numero_prod"></span>
                 </a>
                 </button>
             </div>
@@ -49,23 +52,22 @@
             </ul>
         </section>
         <section>
-            <h1 class="title_carrito">TU CARRITO</h1>
+            <h1 class="title_carrito">TU CARRITO (<span id="burbujaCarrito"></span>)</h1>
+            <button id="trash">VACIAR <i class="fa-solid fa-trash-can"></i></button>
         </section>
         <section id="carrito">
             <section id="lista_carrito">
-                <div>
-                </div>
             </section>
             <aside id="total_carrito">
                 <h3>RESUMEN DEL PEDIDO</h3>
                 <div class="resumen_carrito">
                     <div class="precio_envio">
                         <span>Envío:</span>
-                        <span>$3999</span>
+                        <span id="precio_entrega">$0</span>
                     </div>
                     <div class="precio_total">
                         <span>Total:</span>
-                        <span id="totalCarrito">$0</span>
+                        <span id="totalCarrito"></span>
                     </div>
                     <div>
                         <button class="boton-descartar">PAGAR</button>
@@ -114,6 +116,7 @@
             <p>Desarrollado y diseñado por Alejo Feas Matej</p>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../JS/bd.js"></script>
     <script src="../JS/carrito.js"></script>
 </body>

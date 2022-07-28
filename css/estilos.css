@@ -36,9 +36,14 @@ ul {
   list-style: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 header {
   grid-area: header;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -54,7 +59,7 @@ header nav i {
   font-size: 28px;
 }
 header nav button {
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   border: none;
 }
 header nav .barra_navegacion, header nav .nav_rapida {
@@ -122,7 +127,7 @@ footer {
   grid-area: footer;
 }
 footer #footer_info {
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   display: flex;
   justify-content: center;
 }
@@ -177,7 +182,7 @@ footer #copyright_creditos {
   gap: 20px;
 }
 #breadCrumb ul a:hover {
-  color: rgb(255, 214, 80);
+  color: #d3b246;
 }
 
 .seccion_calzado, .seccion_verano, .seccion_accesorios, .seccion_invierno {
@@ -185,7 +190,7 @@ footer #copyright_creditos {
 }
 .seccion_calzado .title_calzado, .seccion_verano .title_calzado, .seccion_accesorios .title_calzado, .seccion_accesorios .title_accesorios, .seccion_invierno .title_calzado, .seccion_invierno .title_invierno {
   position: absolute;
-  color: rgb(255, 214, 80);
+  color: #d3b246;
   font-weight: bold;
   font-size: 150px;
   top: 50%;
@@ -221,7 +226,7 @@ footer #copyright_creditos {
   width: 400%;
 }
 .container-slider .slider h1 {
-  color: rgb(255, 214, 80);
+  color: #d3b246;
   position: absolute;
   top: 50%;
   left: 40%;
@@ -249,7 +254,7 @@ footer #copyright_creditos {
   transition: 0.25s;
 }
 .container-slider .slider__btn:hover {
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   color: white;
   transition: 0.25s;
 }
@@ -270,7 +275,7 @@ footer #copyright_creditos {
   height: 2px;
   right: 0;
   top: 50%;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
 }
 .title_slider h2 {
   text-align: center;
@@ -284,7 +289,7 @@ footer #copyright_creditos {
   height: 2px;
   bottom: 21.5px;
   left: 0;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   top: 50%;
 }
 
@@ -307,7 +312,6 @@ footer #copyright_creditos {
   overflow: hidden;
 }
 .seccion_descuento .btn {
-  border: none;
   height: 110%;
   width: 3%;
   font-size: 30px;
@@ -315,15 +319,11 @@ footer #copyright_creditos {
   align-items: center;
   justify-content: center;
   position: absolute;
-  background-color: transparent;
   transform: translateY(-50%);
-  font-weight: bold;
-  text-align: center;
   top: 55%;
   cursor: pointer;
   transition: 0.1s ease-out;
   color: transparent;
-  background-color: transparent;
 }
 .seccion_descuento .btn:hover {
   background-color: rgba(255, 214, 80, 0.466);
@@ -341,7 +341,7 @@ footer #copyright_creditos {
 .producto {
   width: 250px;
   height: 435px;
-  border-bottom: rgb(255, 214, 80) 1px solid;
+  border-bottom: #d3b246 1px solid;
   position: relative;
   cursor: pointer;
   transition: 0.1s ease-out;
@@ -352,7 +352,7 @@ footer #copyright_creditos {
 .producto:hover {
   transition: 0.1s ease-in;
   box-shadow: 0 0px 20px lightgrey;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   border-bottom: black solid 1px;
 }
 .producto:hover p, .producto:hover span {
@@ -366,7 +366,7 @@ footer #copyright_creditos {
   padding: 10px;
 }
 .producto .producto-info .precio-sin-desc {
-  text-decoration: line-through rgb(219, 0, 0);
+  text-decoration: line-through #db0000;
 }
 .producto .producto-info span {
   font-size: 20px;
@@ -378,8 +378,6 @@ footer #copyright_creditos {
   color: rgb(219, 0, 0);
 }
 .producto .producto-info .btn_agregar_carrito {
-  border: none;
-  background-color: transparent;
   padding: 0 2px;
 }
 .producto .producto-info .img_agregar_carrito {
@@ -423,7 +421,7 @@ footer #copyright_creditos {
   outline: none;
   -webkit-appearance: none;
   cursor: pointer;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   padding: 5px;
   margin-bottom: 10px;
   border: black 2px solid;
@@ -449,17 +447,17 @@ footer #copyright_creditos {
   transition: 0.25s;
 }
 .container-productos .filtro_productos .container-categoria .categorias_item:hover {
-  color: rgb(255, 214, 80);
+  color: #d3b246;
 }
 .container-productos .filtro_productos .container-categoria .producto {
   width: 20px;
 }
 .container-productos .filtro_productos .container-categoria a:hover {
-  color: rgb(255, 214, 80);
+  color: #d3b246;
 }
 .container-productos .filtro_productos .boton-descartar {
   border: 2px solid black;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   width: 100%;
   padding: 10px;
   cursor: pointer;
@@ -488,8 +486,6 @@ footer #copyright_creditos {
   font-weight: bold;
 }
 .container_price-agregar .btn_agregar_carrito {
-  border: none;
-  background-color: transparent;
   padding: 0 2px;
 }
 .container_price-agregar .img_agregar_carrito {
@@ -502,7 +498,7 @@ footer #copyright_creditos {
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -524,8 +520,6 @@ footer #copyright_creditos {
 #container_name-fav #btn_no_fav {
   cursor: auto;
   padding: 0 2px;
-  background-color: transparent;
-  border: none;
 }
 #container_name-fav #no-fav {
   width: 20px;
@@ -569,7 +563,7 @@ footer #copyright_creditos {
   width: 100px;
   margin-right: 20px;
   font-size: 60px;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   padding: 20px 30px;
 }
 
@@ -587,7 +581,7 @@ footer #copyright_creditos {
   font-size: 20px;
 }
 .seccion_quienessomos .seccion_quienessomos-info p a:hover {
-  color: rgb(255, 214, 80);
+  color: #d3b246;
 }
 
 .seccion_info-producto {
@@ -603,6 +597,21 @@ footer #copyright_creditos {
 .title_carrito {
   font-size: 45px;
   margin-top: 0;
+}
+.title_carrito #burbujaCarrito {
+  font-family: "Staatliches", cursive;
+}
+
+#trash {
+  position: absolute;
+  font-size: 30px;
+  right: 45px;
+  top: 150px;
+  cursor: pointer;
+  font-family: "Staatliches", cursive;
+}
+#trash:hover {
+  color: #db0000;
 }
 
 #carrito {
@@ -639,7 +648,7 @@ footer #copyright_creditos {
 }
 #carrito #total_carrito button {
   border: 2px solid black;
-  background-color: rgb(255, 214, 80);
+  background-color: #d3b246;
   width: 100%;
   cursor: pointer;
   padding: 10px;
@@ -660,53 +669,65 @@ footer #copyright_creditos {
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-#carrito #lista_carrito .container_carrito-info {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-#carrito #lista_carrito .container_carrito-info div {
-  font-size: 20px;
-  margin: 24px 20px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#carrito #lista_carrito .container_carrito-info div .name_producto-carrito {
-  font-size: 30px;
-  font-family: "Staatliches", cursive;
-}
-#carrito #lista_carrito .container_carrito-info div .precio_producto-carrito {
-  font-size: 22px;
-}
-#carrito #lista_carrito .container_carrito-info div .precio_producto-carrito span {
-  font-family: "Staatliches", cursive;
-}
-#carrito #lista_carrito .container_carrito-info div .color_producto-carrito {
-  font-size: 20px;
-}
-#carrito #lista_carrito .container_carrito-info div .talle_producto-carrito {
-  font-size: 20px;
-}
-
-.img_metodos-pago {
-  width: 660px;
-}
-
-.btn_eliminar-producto {
+#carrito #lista_carrito .btn_eliminar-producto {
   font-size: 24px;
   cursor: pointer;
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: transparent;
-  border: none;
   height: 20px;
   margin: 0 0 0 auto;
 }
-
-#input_cantidad_prod {
-  padding: 5px;
+#carrito #lista_carrito .container_carrito-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+#carrito #lista_carrito .container_carrito-info .container_btn-cant {
+  display: flex;
+  cursor: pointer;
+}
+#carrito #lista_carrito .container_carrito-info .container_btn-cant .btn_cant {
+  padding: 0 10px;
+  font-size: 18px;
+  position: absolute;
+  left: 72.5%;
+}
+#carrito #lista_carrito .container_carrito-info .container_btn-cant .btn_cant:hover {
+  color: #d3b246;
+}
+#carrito #lista_carrito .container_carrito-info .container_btn-cant .btn_cant-inc {
+  top: 33%;
+}
+#carrito #lista_carrito .container_carrito-info .container_btn-cant .btn_cant-rest {
+  top: 39%;
+}
+#carrito #lista_carrito .container_carrito-info div {
+  font-size: 20px;
+  margin: 20px 5px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#carrito #lista_carrito .container_carrito-info div #input_cantidad_prod {
+  font-family: "Staatliches", cursive;
+  font-size: 20px;
+  text-align: center;
+  width: 20%;
+  padding-left: 12.5px;
+}
+#carrito #lista_carrito .container_carrito-info div .name_producto-carrito {
+  font-size: 30px;
+  font-family: "Staatliches", cursive;
+}
+#carrito #lista_carrito .container_carrito-info div .precio_producto-carrito span {
+  font-size: 22px;
+  font-family: "Staatliches", cursive;
+}
+#carrito #lista_carrito .container_carrito-info div .talle_producto-carrito select, #carrito #lista_carrito .container_carrito-info div .talle_producto-carrito option {
+  font-family: "Staatliches", cursive;
+  padding-left: 5px;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=estilos.css.map */

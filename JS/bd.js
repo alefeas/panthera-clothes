@@ -6,7 +6,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Buzos',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:55
     },
@@ -17,7 +17,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Joggers',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -28,7 +28,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         categoria:'Jeans',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -39,7 +39,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Accesorios',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'no',
         stock:5
     },
@@ -50,7 +50,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Remeras',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'no',
         stock:5
     },
@@ -62,7 +62,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Buzos',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'no',
         stock:5
     },
@@ -73,7 +73,7 @@ const products = [
         porcDesc:10,
         page:'Hombres',
         category:'Buzos',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'no',
         stock:5
     },
@@ -84,7 +84,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Joggers',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'no',
         stock:5
     },
@@ -95,7 +95,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         categoria:'hogar',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'no',
         stock:55
     },
@@ -106,7 +106,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Jeans',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'no',
         stock:5
     },
@@ -117,7 +117,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Remeras',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -128,7 +128,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Buzos',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -139,7 +139,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Joggers',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -150,7 +150,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         categoria:'Jeans',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -161,7 +161,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Jeans',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -172,7 +172,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Accesorios',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -183,7 +183,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Buzos',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         stock:5
     },
@@ -194,7 +194,7 @@ const products = [
         porcDesc:10,
         page:'Mujeres',
         category:'Buzos',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'si',
         sliderIndex:'si',
         stock:5
@@ -207,7 +207,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Deportivo',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -218,7 +218,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Elegante',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         sliderIndex:'si',
         stock:5
@@ -230,7 +230,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Urbano',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -241,7 +241,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Casual',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -252,7 +252,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Aesthetic',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -263,7 +263,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Deportivo',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -274,7 +274,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Elegante',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -285,7 +285,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Urbano',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         sliderIndex:'si',
         stock:5
@@ -297,7 +297,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Casual',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -308,7 +308,7 @@ const products = [
         porcDesc:10,
         page:'Conjuntos',
         category:'Aesthetic',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -319,7 +319,7 @@ const products = [
         page:'Hombres',
         precioDesc:0,
         category:'Remeras',
-        img:'../images/camperablanca.jpg',
+        img:'camperablanca.jpg',
         slider:'no',
         sliderIndex:'si',
         porcDesc:10,
@@ -332,7 +332,7 @@ const products = [
         precioDesc:2000,
         page:'Hombres',
         category:'Remeras',
-        img:'../images/buzooversize.jpg',
+        img:'buzooversize.jpg',
         slider:'si',
         porcDesc:10,
         stock:5
@@ -344,7 +344,7 @@ const products = [
         precioDesc:0,
         page:'Hombres',
         category:'Buzos',
-        img:'../images/remeraamarillabasica.jpg',
+        img:'remeraamarillabasica.jpg',
         slider:'si',
         porcDesc:10,
         stock:5
@@ -356,7 +356,7 @@ const products = [
         precioDesc:0,
         page:'Hombres',
         category:'Jeans',
-        img:'../images/camperacueroamarilla.webp',
+        img:'camperacueroamarilla.webp',
         slider:'si',
         porcDesc:10,
         stock:5
@@ -368,7 +368,7 @@ const products = [
         porcDesc:10,
         page:'Hombres',
         category:'Remeras',
-        img:'../images/outfitvioleta.jpg',
+        img:'outfitvioleta.jpg',
         slider:'si',
         stock:5
     },
@@ -378,7 +378,7 @@ const products = [
         price: 2990,
         page:'Hombres',
         category:'Accesorios',
-        img:'../images/buzooversize.jpg',
+        img:'buzooversize.jpg',
         slider:'si',
         sliderIndex:'si',
         porcDesc:10,
@@ -391,7 +391,7 @@ const products = [
         porcDesc:10,
         page:'Hombres',
         category:'Remeras',
-        img:'../images/buzooversize.jpg',
+        img:'buzooversize.jpg',
         slider:'si',
         stock:5
     },
@@ -402,7 +402,7 @@ const products = [
         porcDesc:10,
         page:'Hombres',
         category:'Jeans',
-        img:'../images/buzooversize.jpg',
+        img:'buzooversize.jpg',
         slider:'si',
         stock:5
     },
@@ -413,7 +413,7 @@ const products = [
         porcDesc:10,
         page:'Hombres',
         category:'Joggers',
-        img:'../images/buzooversize.jpg',
+        img:'buzooversize.jpg',
         slider:'si',
         stock:5
     },
@@ -424,7 +424,7 @@ const products = [
         porcDesc:10,
         page:'Calzado',
         category:'Deportivo',
-        img:'../images/zapatillas.jpg',
+        img:'zapatillas.jpg',
         slider:'si',
         stock:5
     },
@@ -435,7 +435,7 @@ const products = [
         porcDesc:10,
         page:'Calzado',
         category:'Sandalias',
-        img:'../images/zapatillas.jpg',
+        img:'zapatillas.jpg',
         slider:'si',
         stock:5
     },
@@ -446,7 +446,7 @@ const products = [
         porcDesc:10,
         page:'Calzado',
         category:'Botas',
-        img:'../images/zapatillas.jpg',
+        img:'zapatillas.jpg',
         slider:'si',
         sliderIndex:'si',
         stock:5
@@ -458,7 +458,7 @@ const products = [
         porcDesc:10,
         page:'Calzado',
         category:'Sneakers',
-        img:'../images/zapatillas.jpg',
+        img:'zapatillas.jpg',
         slider:'si',
         stock:5
     },
@@ -469,7 +469,7 @@ const products = [
         porcDesc:10,
         page:'Calzado',
         category:'Elegante',
-        img:'../images/zapatillas.jpg',
+        img:'zapatillas.jpg',
         slider:'si',
         sliderIndex:'si',
         stock:5

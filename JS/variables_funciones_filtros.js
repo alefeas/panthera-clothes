@@ -51,8 +51,8 @@ function mostrarProductos(arrayProductos) {
                 </div>
                 <div class="container_price-agregar">
                     <div class="container_precios">
-                        <span class="precio-sin-desc"> $${element.price}</span>
-                        <span class="precio-descuento"> $${element.price-(element.price *element.porcDesc/100)}</span>
+                        <span class="precio-sin-desc"> $${element.price+(element.price *element.porcDesc/100)}</span>
+                        <span class="precio-descuento"> $${element.price}</span>
                     </div>
                     <button onclick="agregarAlCarrito(${element.id})" class="btn_agregar_carrito"><img class="img_agregar_carrito" src="../images/add-to-basket.png" alt="Agregar al Carrito"></button>
                 </div>
@@ -77,8 +77,8 @@ function mostrarProductosSlider(arrayProductos) {
                 </div>
                 <div class="container_price-agregar">
                     <div class="container_precios">
-                        <span class="precio-sin-desc"> $${element.price}</span>
-                        <span class="precio-descuento"> $${element.price-(element.price *element.porcDesc/100)}</span>
+                        <span class="precio-sin-desc"> $${element.price+(element.price *element.porcDesc/100)}</span>
+                        <span class="precio-descuento"> $${element.price}</span>
                     </div>
                     <button onclick="agregarAlCarrito(${element.id})" style="background=transparent" class="btn_agregar_carrito"><img class="img_agregar_carrito" src="../images/add-to-basket.png" alt="Agregar al Carrito"></button>
                 </div>  
