@@ -40,7 +40,7 @@ function guardarStorage(carritoNuevo) {
     localStorage.setItem('carrito', JSON.stringify(carritoNuevo))
 }
 function cantidadCarrito() {
-    const carrito = capturarStorage()
+    let carrito = capturarStorage()
     burbujaCarrito.innerHTML = carrito.length
 }
 function agregarAlCarrito(idParam) {
@@ -51,40 +51,30 @@ function agregarAlCarrito(idParam) {
             color: '#000',
             fontSize:'20px',
             fontFamily:'Staatliches, cursive',
+            textAlign:'center',
+            width:'200px',
         },
         duration: 1000,
         backgroundColor:'#d3b246',
     }).showToast();
-    if(isInCarrito(idParam)){
-        incrementarCantidad(idParam)
-    }
-    else{
-        const productoEncontrado = products.find(e => e.id == idParam)
-        carrito.push({...productoEncontrado, cantidad:1})
-        guardarStorage(carrito)
-        mostrarCarrito()
-    }
+    const productoEncontrado = products.find(e => e.id == idParam)
+    isInCarrito(idParam) ? incrementarCantidad(idParam) : carrito.push({...productoEncontrado, cantidad:1})
+    guardarStorage(carrito)
+    mostrarCarrito()
 }
 function incrementarCantidad(id){
     let carrito = capturarStorage()
     const indice = carrito.findIndex(e => e.id ==id)
-    if(carrito[indice].cantidad==10){
-        carrito[indice].cantidad--;
-    } 
-    else{
-        carrito[indice].cantidad++
-        guardarStorage(carrito)
-        mostrarCarrito()
-    }
+    carrito[indice].cantidad==10 ? true: carrito[indice].cantidad++
+    guardarStorage(carrito)
+    mostrarCarrito()
 }
 function restarCantidad(id) {
     let carrito = capturarStorage();
     const indice = carrito.findIndex((e) => e.id === id);
-    if (carrito[indice].cantidad > 1) {
-        carrito[indice].cantidad--;
-        guardarStorage(carrito);
-        mostrarCarrito();
-    }
+    carrito[indice].cantidad > 1 ? carrito[indice].cantidad-- : false
+    guardarStorage(carrito);
+    mostrarCarrito();
 }
 function isInCarrito(id){
     let carrito = capturarStorage()   
@@ -101,63 +91,52 @@ function mostrarTotalCarrito() {
 function eliminarProductoCarrito(id) {
     const carrito = capturarStorage();
     const resultado = carrito.filter((prod) => prod.id !== id);
-    let timerInterval
-    Swal.fire({
-        title: 'Eliminando producto.',
-        html: 'Finaliza en <b></b> milisegundos.',
-        timer: 500,
-        timerProgressBar: true,
-        didOpen: () => {
-        Swal.showLoading()
-        const b = Swal.getHtmlContainer().querySelector('b')
-        timerInterval = setInterval(() => {
-            b.textContent = Swal.getTimerLeft()
-        }, 100)
-        },
-        willClose: () => {
-            clearInterval(timerInterval)
-        }
-    }).then((result) => {
-        if (result.dismiss === Swal.DismissReason.timer) {
-        }
-        guardarStorage(resultado);
-        mostrarCarrito();
-    })
+    guardarStorage(resultado);
+    mostrarCarrito();
 }
 function eliminarCarrito() {
-    Swal.fire({
-        title: '¿Desea vaciar el carrito de compras?',
-        showCancelButton: true,
-        confirmButtonColor: '#d3b246',
-        cancelButtonColor: '#db0000',
-        confirmButtonText: 'Eliminar productos',
-        cancelButtonText: 'Cancelar',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            let timerInterval
-            Swal.fire({
-                title: 'Vaciando carrito.',
-                html: 'Finaliza en <b></b> milisegundos.',
-                timer: 1000,
-                timerProgressBar: true,
-                didOpen: () => {
-                Swal.showLoading()
-                const b = Swal.getHtmlContainer().querySelector('b')
-                timerInterval = setInterval(() => {
-                    b.textContent = Swal.getTimerLeft()
-                }, 100)
-                },
-                willClose: () => {
-                    clearInterval(timerInterval)
-                }
-            }).then((result) => {
-                if (result.dismiss === Swal.DismissReason.timer) {
-                    localStorage.removeItem("carrito")
-                    mostrarCarrito()
-                }
-            })
-        }
-    })
+    let carrito = capturarStorage()
+    if(carrito.length == 0){
+        Swal.fire({
+            title: 'Su carrito de compras está vacío.',
+            confirmButtonColor: '#d3b246',
+        })
+    }
+    else{
+        Swal.fire({
+            title: '¿Desea vaciar el carrito de compras?',
+            showCancelButton: true,
+            confirmButtonColor: '#d3b246',
+            cancelButtonColor: '#db0000',
+            confirmButtonText: 'Eliminar productos',
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let timerInterval
+                Swal.fire({
+                    title: 'Vaciando carrito.',
+                    html: 'Finaliza en <b></b> milisegundos.',
+                    timer: 1000,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                            b.textContent = Swal.getTimerLeft()
+                        }, 100)
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval)
+                    }
+                }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        localStorage.removeItem("carrito")
+                        mostrarCarrito()
+                    }
+                })
+            }
+        })
+    }
 }
 mostrarCarrito()
 cantidadCarrito()

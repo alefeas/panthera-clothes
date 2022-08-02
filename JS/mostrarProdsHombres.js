@@ -1,12 +1,10 @@
+//VARIABLES
+let productosHombres = products.filter(objeto => objeto.page ==="Hombres")
+let productosSliderHombres= products.filter(objeto => objeto.slider === "si" && objeto.page ==="Hombres")
+
 //FUNCIONES
-function mostrarProdsHombres(){
-    let productosHombres = products.filter(objeto => objeto.page ==="Hombres")
-    mostrarProductos(productosHombres)
-}
-function filtrar_productos_slider() {
-    let productosSliderHombres= products.filter(objeto => objeto.slider === "si" && objeto.page ==="Hombres")
-    mostrarProductosSlider(productosSliderHombres)
-}
+function mostrarProdsHombres(){mostrarProductos(productosHombres)}
+function filtrar_productos_slider(){mostrarProductosSlider(productosSliderHombres)}
 mostrarProdsHombres()
 filtrar_productos_slider()
 

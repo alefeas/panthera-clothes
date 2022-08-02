@@ -1,3 +1,7 @@
+const products_mujeres = {
+    page:'Mujeres',
+
+}
 const products = [
     {
         id:1,
@@ -8,7 +12,7 @@ const products = [
         category:'Buzos',
         img:'camperablanca.jpg',
         slider:'si',
-        stock:55
+        stock:5
     },
     {
         id:2,

@@ -10,7 +10,7 @@ function mostrarProductosSliderIndex(arrayProductos) {
             <div class="producto-info">
                 <div id="container_name-fav">
                     <p>${element.name}</p>
-                    <button id='btn_no_fav'><img id="no-fav" src="images/heart.png" alt=""></button>
+                    <button onclick='prodsFav(${element.id})' id='btn_no_fav'><img id="no-fav" src="images/heart.png" alt=""></button>
                 </div>
                 <div class="container_price-agregar">
                     <div class="container_precios">
@@ -24,7 +24,6 @@ function mostrarProductosSliderIndex(arrayProductos) {
         `
     });
 }
-
 function filtrar_productos_slider() {
     let productosSliderIndex= products.filter(objeto => objeto.sliderIndex === "si")
     mostrarProductosSliderIndex(productosSliderIndex)
