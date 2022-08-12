@@ -100,7 +100,7 @@ function mostrarProductosSlider(arrayProductos) {
                         <span class="precio-sin-desc"> $${element.price+(element.price *element.porcDesc/100)}</span>
                         <span class="precio-descuento"> $${element.price}</span>
                     </div>
-                    <button onclick="agregarAlCarrito(${element.id})" style="background=transparent" class="btn_agregar_carrito"><img class="img_agregar_carrito" src="../images/add-to-basket.png" alt="Agregar al Carrito"></button>
+                    <button onclick="agregarAlCarrito(${element.id})" class="btn_agregar_carrito"><img class="img_agregar_carrito" src="../images/add-to-basket.png" alt="Agregar al Carrito"></button>
                 </div>  
             </div>
         </div>

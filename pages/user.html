@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito | Panthera</title>
+    <title>Mujeres | Panthera</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
@@ -18,7 +17,7 @@
                 <ul>
                         <li><a href="../pages/conjuntos.html">Conjuntos</a></li>
                         <li><a href="../pages/hombres.html">Hombres</a></li>
-                        <li><a href="../pages/mujeres.html">Mujeres</a></li>
+                        <li><a href="#">Mujeres</a></li>
                         <li><a href="../pages/calzado.html">Calzado</a></li>
                 </ul>
             </div>
@@ -29,13 +28,14 @@
                 </button>
             </div>
             <div class="carrito_user-favs">
-                <a href="../pages/user.html"><img src="../images/user.svg" alt=""></a>
+                <button id="myBtn">
+                    <img src="../images/user.svg" alt="">
+                </button>
                 <button>
                     <img src="../images/heart.svg" alt="">
                 </button>
                 <button><a href="../pages/carrito.html">
                     <img src="../images/shopping-bag.svg" alt="">
-                    <span id="numero_prod"></span>
                 </a>
                 </button>
             </div>
@@ -43,39 +43,27 @@
     </header>
     <main>
         <section class="container_title-vaciar">
-            <h1 class="title_carrito">TU CARRITO (<span id="burbujaCarrito"></span>)</h1>
-            <button id="trash">VACIAR <i class="fa-solid fa-trash-can"></i></button>
+            <h1 class="title_carrito">TU CUENTA</h1>
         </section>
-        <section id="carrito">
-            <section id="lista_carrito">
-            </section>
-            <aside>
-                <div id="total_carrito">
-                    <h3>RESUMEN DEL PEDIDO</h3>
-                    <div class="resumen_carrito">
-                        <div class="precio_envio">
-                            <span>Envío:</span>
-                            <span id="precio_entrega">$0</span>
-                        </div>
-                        <div class="precio_envio">
-                            <span>Descuento:</span>
-                            <span id="precio_entrega">- $0</span>
-                        </div>
-                        <div class="precio_total">
-                            <span>Total:</span>
-                            <span id="totalCarrito"></span>
-                        </div>
-                        <div>
-                            <button class="boton-descartar">PAGAR</button>
-                        </div>
+        <section class="containerLoginRegister">
+            <section class="sectLoginRegister sectLogin" id="sectLogin">
+                <div class="container_login" id="container_login">
+                    <div>
+                        <h3 id="title_login_register">INICIAR SESIÓN</h3>
                     </div>
+                    <input type="text" name="email" id="email" placeholder="E-Mail / Usuario">
+                    <input type="text" name="pass" id="pass" placeholder="Contraseña">
+                    <button id="login"><span>INGRESAR</span></button>
                 </div>
-                <div class="container_code-desc">
-                    <input type="text" placeholder="Código de descuento" class="codigo_desc">
-                </div>
-                <div class="container_metodos">
-                    <h4 class="title_metodos">metodos de pago</h4>
-                    <img src="../images/pagos.webp" alt="">
+            </section>
+            <aside class="sectLoginRegister sectRegister">
+                <div class="container_login" id="container_login">
+                    <div>
+                        <h3 id="title_login_register">CREAR CUENTA</h3>
+                    </div>
+                    <input type="email" name="email" id="email" placeholder="E-Mail / Usuario">
+                    <input type="text" name="pass" id="pass" placeholder="Contraseña">
+                    <button id="login"><span>REGISTRARSE</span></button>
                 </div>
             </aside>
         </section>
@@ -120,8 +108,8 @@
             <p>Desarrollado y diseñado por Alejo Feas Matej</p>
         </div>
     </footer>
+    <a href=""><img src="../images/whatsapp.png" alt="WhatsApp" id="whatsapp"></a>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="../JS/bd.js"></script>
-    <script src="../JS/carrito.js"></script>
+    <script src="../JS/login.js"></script>
 </body>
 </html>

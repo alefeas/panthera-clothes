@@ -9,8 +9,9 @@ const precio_entrega = document.querySelector("#precio_entrega")
 //FUNCIONES
 function mostrarCarrito() {
     let carrito = capturarStorage()
-    lista_carrito.innerHTML = ''
-    carrito.forEach(element => {
+    if(carrito.length > 0){
+        lista_carrito.innerHTML = ''
+        carrito.forEach(element => {
         lista_carrito.innerHTML +=`
         <div id="producto_carrito">
         <div class="container_carrito-info">
@@ -27,9 +28,18 @@ function mostrarCarrito() {
             </div>
         </div>
         <button onclick="eliminarProductoCarrito(${element.id})" class="btn_eliminar-producto"><i class="fa-solid fa-xmark"></i></button>
-    </div>
+        </div>
         `
     })
+    }
+    else{
+        lista_carrito.innerHTML = `
+            <div class="carrito_vacio">
+                <h3>TU CARRITO ESTÁ VACÍO</h3>
+                <span><a href="../index.html">COMPRAR</a></span>
+            </div>
+        `
+    }
     cantidadCarrito()
     mostrarTotalCarrito()
 }
@@ -41,6 +51,7 @@ function guardarStorage(carritoNuevo) {
 }
 function cantidadCarrito() {
     let carrito = capturarStorage()
+    let productoEncontrado = products.filter(e => e.id)
     burbujaCarrito.innerHTML = carrito.length
 }
 function agregarAlCarrito(idParam) {
@@ -89,10 +100,10 @@ function mostrarTotalCarrito() {
     totalCarrito.innerHTML ='$' + total;
 }
 function eliminarProductoCarrito(id) {
-    const carrito = capturarStorage();
+    let carrito = capturarStorage()
     const resultado = carrito.filter((prod) => prod.id !== id);
-    guardarStorage(resultado);
-    mostrarCarrito();
+    guardarStorage(resultado)
+    mostrarCarrito()
 }
 function eliminarCarrito() {
     let carrito = capturarStorage()

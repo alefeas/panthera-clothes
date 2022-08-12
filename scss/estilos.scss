@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 $color-principal:#d3b246;
+$color-rojo:#db0000;
 $font-logo: 'Stoke', serif;
 $font-titles: 'Staatliches', cursive;
 $font-info: 'Raleway', sans-serif;  
@@ -21,16 +22,16 @@ $font-info: 'Raleway', sans-serif;
     right: 0;
     bottom: 0;
 }
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family: $font-titles;
 }
 a{
     text-decoration: none;
     color: black;
-    transition: .25s;
+    transition: .5s;
     &:hover{
         color: white;
-        transition: .25s;
+        transition: .5s;
     }
 }
 ul{
@@ -40,6 +41,7 @@ button{
     background-color: transparent;
     border: none;
 }
+
 //HEADER & FOOTER
 
 header{
@@ -53,7 +55,7 @@ header{
         justify-content: space-around;
         align-items: center;
         height: 80px;
-        width:90%;
+        width:100%;
         i{
             font-size: 28px;
         }
@@ -127,7 +129,6 @@ header{
     }
 }
 footer{
-    grid-area: footer;
     #footer_info{
         background-color: $color-principal;
         display: flex;
@@ -139,10 +140,11 @@ footer{
             padding-bottom: 2px;
         }
         .enlaces_info{
+            max-width: 640px;
             height: 100%;
             margin:15px 0 25px 0;
             margin-left: 20px;
-            width: 25%;
+            width: 33.3%;
             ul{
                 display: flex;
                 flex-direction: column;
@@ -180,7 +182,52 @@ footer{
     }
 }
 
-//INICIO
+//LOGIN
+
+.containerLoginRegister{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin:0 auto;
+    .container_login{
+        margin-top: 30px;
+        border: none;
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 400px;
+        #email, #pass{
+            outline: none;
+            padding: 5px;
+            font-size: 18px;
+            width: 100%;
+            height: 50px;
+        }
+        #title_login_register{
+            font-size: 30px;
+            border-bottom: 3px black solid;
+        }
+        #login{
+            border: 2px solid black;
+            background-color: $color-principal;
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            span{
+                font-family: $font-titles;
+                font-size: 20px;
+            }
+        }
+    }
+}
+.logError{
+    font-weight: bold;
+    color: $color-rojo;
+    i{
+        font-size: 16px;
+    }    
+}
 
 //SECCIÓN CALZADO
 
@@ -193,7 +240,7 @@ footer{
         gap: 20px;
         a{
             &:hover{
-                color: $color-principal;
+                color: $color-rojo;
             }
         }
     }
@@ -392,7 +439,7 @@ footer{
     .producto-info{
         padding: 10px;
         .precio-sin-desc{
-            text-decoration:line-through #db0000;
+            text-decoration:line-through $color-rojo;
         }
         span{
             font-size: 20px;
@@ -401,7 +448,7 @@ footer{
             font-family: $font-titles;
         }
         .precio-descuento{
-            color: rgb(219, 0, 0);  
+            color: $color-rojo;  
         }
         .btn_agregar_carrito{
             padding:0 2px;           
@@ -632,78 +679,116 @@ footer{
     }
 }
 
-//PÁGINA PRODUCTO
+//CARRITO
 
 .seccion_info-producto{
     width: 80%;
     border: red solid 2px;
     display: flex;
     justify-content: space-between;
-    .detallesCompra{
-    }
     .imagenes-producto{
         .img-producto{
             width: 400px;
         }
     }
 }
+.container_title-vaciar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+    max-width: 1400px;
+    margin: 20px auto 0;
+}
 .title_carrito{
-    @extend .title_tuto-compra;
     font-size: 45px;
-    margin-top: 0;
     #burbujaCarrito{
         font-family: $font-titles;
     }
 }
 #trash{
-    position: absolute;
     font-size: 30px;
-    right: 45px;
-    top: 150px;
+    right: 260px;
+    top: 122.5px;
     cursor: pointer;
     font-family: $font-titles;
+    transition: .5s;
     &:hover{
-        color: #db0000;
+        color: $color-rojo;
+        transition: .5s;
     }
 }
 #carrito{  
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
-    padding:20px 40px;
+    padding:20px 0 30px 0;
     margin: 0 auto;
     gap: 30px;
-    #total_carrito{
+    aside{
         display: flex;
         flex-direction: column;
-        width: 35%; 
-        height: 275px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        padding: 20px;
-        .resumen_carrito{
-            margin-top: 52px;
+        width: 35%;
+        gap: 20px;
+        #total_carrito{
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            width: 100%; 
+            height: 275px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            gap: 25px;
+            .resumen_carrito{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .precio_envio, .precio_total{
+                display: flex;
+                justify-content: space-between;
+            }
+            h3{
+                font-size: 26px;
+            }
+            span{
+                font-size:22px;
+                font-family: $font-titles;
+            }
+            button{
+                border: 2px solid black;
+                background-color: $color-principal;
+                width: 100%;
+                cursor: pointer;
+                padding: 10px;
+                font-size:22px;
+                font-family: $font-titles;
+            }
         }
-        .precio_envio, .precio_total{
-            display: flex;
-            justify-content: space-between;
-        }
-        h3{
-            font-size: 26px;
-        }
-        span{
-            font-size:22px;
-            font-family: $font-titles;
-        }
-        button{
-            border: 2px solid black;
-            background-color: $color-principal;
+        .container_code-desc{
             width: 100%;
-            cursor: pointer;
-            padding: 10px;
-            font-size:22px;
-            font-family: $font-titles;
+            .codigo_desc{
+                border:1px solid rgba(0, 0, 0, 0.2);
+                font-size: 20px;
+                font-family: $font-titles;
+                padding: 10px;
+                width: 100%;
+                height: 50px;
+                outline: none;
+            }
+        }
+        .container_metodos{
+            @extend .container_code-desc;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            gap: 10px;
+            .title_metodos{
+                font-size: 26px;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
     }
     img{
@@ -715,6 +800,7 @@ footer{
         flex-wrap: wrap;
         gap: 20px;
         #producto_carrito{
+            height: 275px;
             width: 100%;
             display: flex;
             border: 1px solid rgba(0, 0, 0, 0.2);
@@ -727,6 +813,29 @@ footer{
             padding: 20px;
             height: 20px;
             margin: 0 0 0 auto;
+        }
+        .carrito_vacio{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            h3{
+                font-size: 50px;
+            }
+            span{
+                a{
+                    background-color: $color-principal;
+                    padding: 5px 20px;
+                    border: 2px solid black;
+                    font-family: $font-titles;
+                    font-size: 20px;
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
         }
         .container_carrito-info{
             position: relative;
@@ -751,7 +860,6 @@ footer{
                     top: 39%;
                 }
             }
-            
             div{
                 font-size: 20px;
                 margin: 20px 5px 20px 10px;
@@ -763,6 +871,7 @@ footer{
                     font-size: 20px;
                     text-align: center;
                     width: 20%;
+                    padding-left: 12.5px;
                 }
                 .name_producto-carrito{
                     font-size: 30px;
