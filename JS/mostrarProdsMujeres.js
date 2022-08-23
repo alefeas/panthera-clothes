@@ -1,9 +1,11 @@
 //VARIABLES
 let productosMujeres = products.filter(objeto => objeto.page ==="Mujeres")
-let productosSliderMujeres = products.filter(objeto => objeto.slider === "si" && objeto.page ==="Mujeres")
+let productosSliderMujeres = products.filter(objeto => objeto.slider === "si" && objeto.page === "Mujeres")
 
 //FUNCIONES
-function mostrarProdsMujeres(){ mostrarProductos(productosMujeres) }
+function mostrarProdsMujeres(){
+    mostrarProductos(productosMujeres)  
+}
 function filtrar_productos_slider(){ mostrarProductosSlider(productosSliderMujeres) }
 mostrarProdsMujeres()
 filtrar_productos_slider()

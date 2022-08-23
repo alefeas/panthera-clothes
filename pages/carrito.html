@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <header>
+        <div id="containerCarga">
+            <div id="carga"></div>
+        </div>
         <nav>
             <div class="nav_rapida">
                 <a href="../index.html"><span class="logo">PANTHERA</span></a>
@@ -31,9 +33,11 @@
             <div class="carrito_user-favs">
                 <a href="../pages/user.html"><img src="../images/user.svg" alt=""></a>
                 <button>
-                    <img src="../images/heart.svg" alt="">
+                    <a href="../pages/favs.html">
+                        <img src="../images/heart.svg" alt="">
+                    </a>
                 </button>
-                <button><a href="../pages/carrito.html">
+                <button><a href="#">
                     <img src="../images/shopping-bag.svg" alt="">
                     <span id="numero_prod"></span>
                 </a>
@@ -46,7 +50,7 @@
             <h1 class="title_carrito">TU CARRITO (<span id="burbujaCarrito"></span>)</h1>
             <button id="trash">VACIAR <i class="fa-solid fa-trash-can"></i></button>
         </section>
-        <section id="carrito">
+        <section class="carrito">
             <section id="lista_carrito">
             </section>
             <aside>
@@ -59,7 +63,7 @@
                         </div>
                         <div class="precio_envio">
                             <span>Descuento:</span>
-                            <span id="precio_entrega">- $0</span>
+                            <span id="descCompra">- $0</span>
                         </div>
                         <div class="precio_total">
                             <span>Total:</span>
@@ -71,7 +75,8 @@
                     </div>
                 </div>
                 <div class="container_code-desc">
-                    <input type="text" placeholder="Código de descuento" class="codigo_desc">
+                    <input type="text" placeholder="Código de descuento" id="inputCode" class="codigo_desc">
+                    <button onclick="a()" id="btnDesc">asd</button>
                 </div>
                 <div class="container_metodos">
                     <h4 class="title_metodos">metodos de pago</h4>
@@ -89,7 +94,6 @@
                 <ul>
                     <li><a href="../pages/pregfrec.html"><i class="fa-solid fa-chevron-right"></i> Preguntas frecuentes</a></li>
                     <li><a href="../pages/quienessomos.html"><i class="fa-solid fa-chevron-right"></i> ¿Quienes somos?</a></li>
-                    <li><a href="../pages/metodospago.html"><i class="fa-solid fa-chevron-right"></i> Metodos de pago</a></li>
                     <li><a href="../pages/tutocompra.html"><i class="fa-solid fa-chevron-right"></i> ¿Cómo comprar?</a></li>
                 </ul>
             </div>
@@ -120,8 +124,9 @@
             <p>Desarrollado y diseñado por Alejo Feas Matej</p>
         </div>
     </footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../JS/bd.js"></script>
+    <script src="../JS/totalCarrito.js"></script>
     <script src="../JS/carrito.js"></script>
+    <script src="../JS/cargaPag.js"></script>
 </body>
 </html>

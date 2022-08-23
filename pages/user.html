@@ -7,17 +7,20 @@
     <title>Mujeres | Panthera</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
     <header>
+        <div id="containerCarga">
+            <div id="carga"></div>
+        </div>
         <nav>
             <div class="nav_rapida">
                 <a href="../index.html"><span class="logo">PANTHERA</span></a>
                 <ul>
                         <li><a href="../pages/conjuntos.html">Conjuntos</a></li>
                         <li><a href="../pages/hombres.html">Hombres</a></li>
-                        <li><a href="#">Mujeres</a></li>
+                        <li><a href="../pages/mujeres.html">Mujeres</a></li>
                         <li><a href="../pages/calzado.html">Calzado</a></li>
                 </ul>
             </div>
@@ -45,8 +48,8 @@
         <section class="container_title-vaciar">
             <h1 class="title_carrito">TU CUENTA</h1>
         </section>
-        <section class="containerLoginRegister">
-            <section class="sectLoginRegister sectLogin" id="sectLogin">
+        <section id="containerLoginRegister">
+            <section class="sectLoginRegister" id="sectLogin">
                 <div class="container_login" id="container_login">
                     <div>
                         <h3 id="title_login_register">INICIAR SESIÓN</h3>
@@ -57,12 +60,15 @@
                 </div>
             </section>
             <aside class="sectLoginRegister sectRegister">
-                <div class="container_login" id="container_login">
+                <div class="container_login" id="containerRegister">
                     <div>
                         <h3 id="title_login_register">CREAR CUENTA</h3>
                     </div>
-                    <input type="email" name="email" id="email" placeholder="E-Mail / Usuario">
-                    <input type="text" name="pass" id="pass" placeholder="Contraseña">
+                    <input type="text" name="pass" id="pass" placeholder="Nombre">
+                    <input type="text" name="pass" id="pass" placeholder="Apellido">
+                    <input type="email" name="email" id="email" placeholder="E-Mail">
+                    <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                    <input type="password" name="pass" id="pass" placeholder="Repetir Contraseña">
                     <button id="login"><span>REGISTRARSE</span></button>
                 </div>
             </aside>
@@ -111,5 +117,6 @@
     <a href=""><img src="../images/whatsapp.png" alt="WhatsApp" id="whatsapp"></a>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../JS/login.js"></script>
+    <script src="../JS/cargaPag.js"></script>
 </body>
 </html>

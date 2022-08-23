@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodos De Pago| Panthera</title>
+    <title>Carrito | Panthera</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
     <header>
+        <div id="containerCarga">
+            <div id="carga"></div>
+        </div>
         <nav>
             <div class="nav_rapida">
                 <a href="../index.html"><span class="logo">PANTHERA</span></a>
                 <ul>
-                    <li><a href="../pages/conjuntos.html">Deporte</a></li>
-                    <li><a href="../pages/hombres.html">Verano</a></li>
-                    <li><a href="../pages/mujeres.html">Invierno</a></li>
-                    <li><a href="../pages/calzado.html">Calzado</a></li>
+                        <li><a href="../pages/conjuntos.html">Conjuntos</a></li>
+                        <li><a href="../pages/hombres.html">Hombres</a></li>
+                        <li><a href="../pages/mujeres.html">Mujeres</a></li>
+                        <li><a href="../pages/calzado.html">Calzado</a></li>
                 </ul>
             </div>
             <div class="barra_navegacion">
@@ -29,34 +33,36 @@
             <div class="carrito_user-favs">
                 <a href="../pages/user.html"><img src="../images/user.svg" alt=""></a>
                 <button>
-                    <img src="../images/heart.svg" alt="">
+                    <a href="#">
+                        <img src="../images/heart.svg" alt="">
+                    </a>
                 </button>
-                <button>
+                <button><a href="../pages/carrito.html">
                     <img src="../images/shopping-bag.svg" alt="">
+                    <span id="numero_prod"></span>
+                </a>
                 </button>
             </div>
         </nav>
     </header>
     <main>
-        <section id="breadCrumb">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><i class="fa-solid fa-chevron-right"></i></li>
-                <li>Metodos De Pago</li>
-            </ul>
+        <section class="container_title-vaciar">
+            <h1 class="title_carrito">FAVORITOS (<span id="burbujaFavs"></span>)</h1>
         </section>
-        
+        <section class="favs">
+            <section id="lista_favs">
+            </section>
+        </section>
     </main>
     <footer>
         <div id="footer_info">
             <div class="enlaces_info">
-                <div class="container_span-footer">    
+                <div class="container_span-footer">
                     <span>Enlaces útiles</span>
                 </div>
                 <ul>
                     <li><a href="../pages/pregfrec.html"><i class="fa-solid fa-chevron-right"></i> Preguntas frecuentes</a></li>
                     <li><a href="../pages/quienessomos.html"><i class="fa-solid fa-chevron-right"></i> ¿Quienes somos?</a></li>
-                    <li><a href="../pages/metodospago.html"><i class="fa-solid fa-chevron-right"></i> Metodos de pago</a></li>
                     <li><a href="../pages/tutocompra.html"><i class="fa-solid fa-chevron-right"></i> ¿Cómo comprar?</a></li>
                 </ul>
             </div>
@@ -76,7 +82,7 @@
                 </div>
                 <ul>
                     <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
                 </ul>
@@ -87,7 +93,8 @@
             <p>Desarrollado y diseñado por Alejo Feas Matej</p>
         </div>
     </footer>
-    <a href=""><img src="../images/whatsapp.png" alt="WhatsApp" id="whatsapp"></a>
-    <script src="../JS/carrito.js"></script>
+    <script src="../JS/bd.js"></script>
+    <script src="../JS/favs.js"></script>
+    <script src="../JS/cargaPag.js"></script>
 </body>
 </html>

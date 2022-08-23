@@ -2,7 +2,7 @@ function mostrarProductosSliderIndex(arrayProductos) {
     sliderProducts.innerHTML = ''
     arrayProductos.forEach(element => {
         sliderProducts.innerHTML += `
-        <div class="producto">
+        <div class="producto card swiper-slide">
             <img class="img-producto" src="images/${element.img}" alt="${element.name}">
             <div class="porc-descuento">
                 <span>% ${element.porcDesc}</span>
@@ -10,7 +10,7 @@ function mostrarProductosSliderIndex(arrayProductos) {
             <div class="producto-info">
                 <div id="container_name-fav">
                     <p>${element.name}</p>
-                    <button onclick='prodsFav(${element.id})' id='btn_no_fav'><img id="no-fav" src="images/heart.png" alt=""></button>
+                    <button onclick='agregarFavs(${element.id})' id='btn_no_fav'><img id="nofav" src="images/heart.png" alt=""></button>
                 </div>
                 <div class="container_price-agregar">
                     <div class="container_precios">

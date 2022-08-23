@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 <body>
     <header>
+        <div id="containerCarga">
+            <div id="carga"></div>
+        </div>
         <nav>
             <div class="nav_rapida">
                 <a href="#"><span class="logo">PANTHERA</span></a>
@@ -30,7 +34,9 @@
             <div class="carrito_user-favs">
                 <a href="pages/user.html"><img src="images/user.svg" alt=""></a>
                 <button>
-                    <img src="images/heart.svg" alt="">
+                    <a href="pages/favs.html">
+                        <img src="images/heart.svg" alt="">
+                    </a>
                 </button>
                 <button><a href="pages/carrito.html">
                     <img src="images/shopping-bag.svg" alt="">
@@ -56,18 +62,34 @@
                     <img src="images/slider4.webp" alt="" class="slider__img">
                 </div>
             </div>
-            <div class="slider__btn slider__btn--right" id="btn-right"><i class="fa-solid fa-chevron-right"></i></div>
-            <div class="slider__btn slider__btn--left" id="btn-left"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="slider__btn slider__btn--right" id="nxt-btn"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="slider__btn slider__btn--left" id="pre-btn"><i class="fa-solid fa-chevron-left"></i></div>
+        </section>
+        <section class="sectLinkImg">
+            <div>
+                <a href=""><img class="imgLinkInicio" src="images/zapatillas.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img class="imgLinkInicio" src="images/camperablanca.jpg" alt=""></a>
+            </div>
+            <div>
+                <img class="imgLinkInicio" onclick="hola()" src="images/outfitvioleta.jpg" alt="">
+            </div>
+            <div>
+                <a href=""><img class="imgLinkInicio" src="images/zapatillas.jpg" alt=""></a>
+            </div>
         </section>
         <div class="title_slider">
             <h2>¡DESCUENTOS HASTA EL 31/07!</h2>
         </div>
-        <section class="seccion_descuento">
-            <div class="seccion_productos" id="sliderProducts">
+        <div class="slide-container swiper">
+            <div class="swiper-button-next swiper-btn"><i class="fa fa-chevron-right"></i></div>
+            <div class="swiper-button-prev swiper-btn"><i class="fa fa-chevron-left"></i></div>
+            <div class="slide-content">
+                <div id="sliderProducts" class="card-wrapper swiper-wrapper">
+                </div>
             </div>
-            <button class="btn btn-right"><i class="fa-solid fa-chevron-right glider-next"></i></button>
-            <button class="btn btn-left glider-prev"><i class="fa-solid fa-chevron-left"></i></button> 
-        </section>
+        </div>
     </main>
     <footer>
         <div id="footer_info">
@@ -78,7 +100,6 @@
                 <ul>
                     <li><a href="pages/pregfrec.html"><i class="fa-solid fa-chevron-right"></i> Preguntas frecuentes</a></li>
                     <li><a href="pages/quienessomos.html"><i class="fa-solid fa-chevron-right"></i> ¿Quienes somos?</a></li>
-                    <li><a href="pages/metodospago.html"><i class="fa-solid fa-chevron-right"></i> Metodos de pago</a></li>
                     <li><a href="pages/tutocompra.html"><i class="fa-solid fa-chevron-right"></i> ¿Cómo comprar?</a></li>
                 </ul>
             </div>
@@ -109,10 +130,13 @@
     </footer>
     <a href=""><img src="images/whatsapp.png" alt="WhatsApp" id="whatsapp"></a>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="JS/swiper-bundle.min.js"></script>
+    <script src="JS/sliderProducts.js"></script>
     <script src="JS/bd.js"></script>
     <script src="JS/variables_funciones_filtros.js"></script>
     <script src="JS/mostrarProdsIndex.js"></script>
     <script src="JS/carrito.js"></script>
     <script src="JS/favs.js"></script>
+    <script src="JS/cargaPag.js"></script>
 </body>
 </html>

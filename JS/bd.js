@@ -1,5 +1,5 @@
 const products = [
-    { id:1, name:'Buzo Oversize.',price: 8990, porcDesc:10, page:'Mujeres', category:'Buzos', img:'camperablanca.jpg', slider:'si', stock:5 },
+    { id:1, name:'Buzo Oversize.',price: 8990, porcDesc:-10, page:'Mujeres', category:'Buzos', img:'camperablanca.jpg', slider:'si', stock:5 },
     { id:2, name:'Jogger de Jean.', price: 9990, porcDesc:10, page:'Mujeres', category:'Joggers', img:'camperablanca.jpg', slider:'si', stock:5},
     { id:3, name:'Jean Oversize.', price: 12990, porcDesc:10, page:'Mujeres', categoria:'Jeans', img:'camperablanca.jpg', slider:'si', stock:5 },
     { id:4, name:'Collar de Plata.', price: 2990, porcDesc:10, page:'Mujeres', category:'Accesorios', img:'camperablanca.jpg', slider:'no', stock:5 },
@@ -7,7 +7,7 @@ const products = [
     { id:6, name:'Buzo Canguro.', price: 2990, porcDesc:10, page:'Mujeres', category:'Buzos', img:'camperablanca.jpg', slider:'no', stock:5 },
     { id:7, name:'Buzo Oversize.', price: 8990, porcDesc:10, page:'Hombres', category:'Buzos', img:'camperablanca.jpg', slider:'no', stock:5 },
     { id:8, name:'Jogger de Je .', price: 9990, porcDesc:10, page:'Mujeres', category:'Joggers', img:'camperablanca.jpg', slider:'no', stock:5 },
-    { id:9, name:'Jean Oversize.', price: 12990, porcDesc:10, page:'Mujeres', categoria:'hogar', img:'camperablanca.jpg', slider:'no', stock:55 },
+    { id:9, name:'Jean Oversize.', price: 12990, porcDesc:10, page:'Mujeres', categoria:'hogar', img:'camperablanca.jpg', slider:'no', stock:5 },
     { id:10, name:'Jean Elastizado.', price: 10990, porcDesc:10, page:'Mujeres', category:'Jeans', img:'camperablanca.jpg', slider:'no'},
     { id:11, name:'Remera Oversize.', price: 2990, porcDesc:10, page:'Mujeres', category:'Remeras', img:'camperablanca.jpg', slider:'si', stock:5 },
     { id:12, name:'Buzo Oversize.', price: 8990, porcDesc:10, page:'Mujeres', category:'Buzos', img:'camperablanca.jpg', slider:'si', stock:5 },
@@ -38,7 +38,7 @@ const products = [
         img:'outfitvioleta.jpg',
         slider:'si',
         sliderIndex:'si',
-        stock:5
+        stock:10
     },
     {
         id:21,
@@ -93,7 +93,7 @@ const products = [
         category:'Elegante',
         img:'outfitvioleta.jpg',
         slider:'si',
-        stock:5
+        stock:60
     },
     {
         id:26,
@@ -142,12 +142,12 @@ const products = [
         porcDesc:10,
         stock:5
     },
-    { id:30, name:'Chomba.', price: 2990, precioDesc:2000, page:'Hombres', category:'Remeras', img:'buzooversize.jpg', slider:'si', porcDesc:10, stock:5 },
+    { id:30, name:'Chomba.', price: 2990, precioDesc:2000, page:'Hombres', category:'Remeras', img:'buzooversize.jpg', sliderIndex:'si', slider:'si', porcDesc:10, stock:5 },
     { id:31, name:'Buzo Canguro.', price: 2990, precioDesc:0, page:'Hombres', category:'Buzos', img:'remeraamarillabasica.jpg', slider:'si', porcDesc:10, stock:5 },
-    { id:32, name:'Jean Elastizado.', price: 10990, precioDesc:0, page:'Hombres', category:'Jeans', img:'camperacueroamarilla.webp', slider:'si', porcDesc:10, stock:5 },
+    { id:32, name:'Jean Elastizado.', price: 10990, precioDesc:0, page:'Hombres', category:'Jeans', img:'camperacueroamarilla.webp', sliderIndex:'si', slider:'si', porcDesc:10, stock:5 },
     { id:33, name:'Chomba.', price: 2990, porcDesc:10, page:'Hombres', category:'Remeras', img:'outfitvioleta.jpg', slider:'si', stock:5 },
     { id:34, name:'Collar de Plata.', price: 2990, page:'Hombres', category:'Accesorios', img:'buzooversize.jpg', slider:'si', sliderIndex:'si', porcDesc:10, stock:5 },
-    { id:35, name:'Chomba.', price: 2990, porcDesc:10, page:'Hombres', category:'Remeras', img:'buzooversize.jpg', slider:'si', stock:5 },
+    { id:35, name:'Chomba.', price: 2990, porcDesc:10, page:'Hombres', category:'Remeras', img:'buzooversize.jpg',sliderIndex:'si', slider:'si', stock:5 },
     { id:36, name:'Jean Oversize.', price: 2990, porcDesc:10, page:'Hombres', category:'Jeans', img:'buzooversize.jpg', slider:'si', stock:5 },
     { id:37, name:'Jogger de Jean.', price: 2990, porcDesc:10, page:'Hombres', category:'Joggers', img:'buzooversize.jpg', slider:'si', stock:5 },
     { id:38, name:'Zapatillas.', price: 2990, porcDesc:10, page:'Calzado', category:'Deportivo', img:'zapatillas.jpg', slider:'si', stock:5 },
@@ -155,4 +155,9 @@ const products = [
     { id:40, name:'Botas.', price: 2990, porcDesc:10, page:'Calzado', category:'Botas', img:'zapatillas.jpg', slider:'si', sliderIndex:'si', stock:5 },
     { id:41, name:'Sneakers.', price: 2990, porcDesc:10, page:'Calzado', category:'Sneakers', img:'zapatillas.jpg', slider:'si', stock:5 },
     { id:42, name:'Elegante.', price: 2990, porcDesc:10, page:'Calzado', category:'Elegante', img:'zapatillas.jpg', slider:'si', sliderIndex:'si', stock:5 },
+    { id:43, name:'Zapatillas.', price: 2990, porcDesc:10, page:'Calzado', category:'Deportivo', img:'zapatillas.jpg', slider:'si', stock:5 },
+    { id:44, name:'Sandalias.', price: 2990, porcDesc:10, page:'Calzado', category:'Sandalias', img:'zapatillas.jpg', slider:'si', stock:5 },
+    { id:45, name:'Botas.', price: 2990, porcDesc:10, page:'Calzado', category:'Botas', img:'zapatillas.jpg', slider:'si', sliderIndex:'si', stock:5 },
+    { id:46, name:'Sneakers.', price: 2990, porcDesc:10, page:'Calzado', category:'Sneakers', img:'zapatillas.jpg', slider:'si', stock:5 },
+    { id:47, name:'Elegante.', price: 2990, porcDesc:10, page:'Calzado', category:'Elegante', img:'zapatillas.jpg', slider:'si', sliderIndex:'si', stock:5 },
 ]

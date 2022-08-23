@@ -3,8 +3,6 @@ const lista_carrito = document.getElementById('lista_carrito')
 const total_carrito = document.getElementById('total_carrito')
 const btn_vaciar_carrito = document.getElementById('trash')
 const burbujaCarrito = document.querySelector("#burbujaCarrito")
-const totalCarrito = document.querySelector("#totalCarrito")
-const precio_entrega = document.querySelector("#precio_entrega")
 
 //FUNCIONES
 function mostrarCarrito() {
@@ -49,10 +47,12 @@ function capturarStorage() {
 function guardarStorage(carritoNuevo) {
     localStorage.setItem('carrito', JSON.stringify(carritoNuevo))
 }
-function cantidadCarrito() {
+function cantidadCarrito(array) {
     let carrito = capturarStorage()
-    let productoEncontrado = products.filter(e => e.id)
-    burbujaCarrito.innerHTML = carrito.length
+    const cantProds = carrito.reduce(
+    (acc, elem) => acc + elem.cantidad,    
+    0)
+    burbujaCarrito.innerHTML = cantProds
 }
 function agregarAlCarrito(idParam) {
     let carrito = capturarStorage()
@@ -76,7 +76,7 @@ function agregarAlCarrito(idParam) {
 function incrementarCantidad(id){
     let carrito = capturarStorage()
     const indice = carrito.findIndex(e => e.id ==id)
-    carrito[indice].cantidad==10 ? true: carrito[indice].cantidad++
+    carrito[indice].cantidad==carrito[indice].stock ? true: carrito[indice].cantidad++
     guardarStorage(carrito)
     mostrarCarrito()
 }
@@ -90,14 +90,6 @@ function restarCantidad(id) {
 function isInCarrito(id){
     let carrito = capturarStorage()   
     return carrito.some(e => e.id == id)
-}
-function mostrarTotalCarrito() {
-    const carrito = capturarStorage();
-    const total = carrito.reduce(
-      (acc, elem) => acc + elem.cantidad * elem.price,
-    0
-    );
-    totalCarrito.innerHTML ='$' + total;
 }
 function eliminarProductoCarrito(id) {
     let carrito = capturarStorage()
