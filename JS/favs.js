@@ -1,48 +1,54 @@
+//VARIABLES
 const lista_favs = document.getElementById('lista_favs')
 const burbujaFavs = document.getElementById('burbujaFavs')
+const trash_favs = document.getElementById('trashFavs')
 
+//FUCIONES
 function mostrarFavs() {
-    let favs = capturarStorage()
+    let favs = capturarStorageFavs()
     if(favs.length > 0){
         lista_favs.innerHTML = ''
         favs.forEach(element => {
         lista_favs.innerHTML +=`
-        <div id="producto_carrito">
-        <div class="container_carrito-info">
-        <img src="../images/${element.img}" alt="">
-        <div class="container_btn-cant">
-            <button onclick="incrementarCantidad(${element.id})" class="btn_cant btn_cant-inc"><i class="fa-solid fa-caret-up"></i></button>    
-            <button onclick="restarCantidad(${element.id})" class="btn_cant btn_cant-rest"><i class="fa-solid fa-caret-down"></i></button>
-        </div>
-        <div>
-        <span class="name_producto-carrito">${element.name}</span>
-        <p class="color_producto-carrito">Cantidad: <input type="number" value="${element.cantidad}" readonly name="" id="input_cantidad_prod"></p>
-        <p class="talle_producto-carrito">Talle: <select name="" id="select_talle"><option value="">XS</option></select></p>
-                <p class="precio_producto-carrito">Precio: <span>$${element.price*element.cantidad}</span></p>
+        <div class="producto card swiper-slide">
+            <img class="img-producto" src="../images/${element.img}" alt="${element.name}">
+            <div class="porc-descuento">
+                <span>% ${element.porcDesc}</span>
             </div>
-        </div>
-        <button onclick="eliminarProdFav(${element.id})" class="btn_eliminar-producto"><i class="fa-solid fa-xmark"></i></button>
+            <div class="producto-info">
+                <div id="container_name-fav">
+                    <p>${element.name}</p>
+                    <button onclick='eliminarProdFav(${element.id})' id='btn_no_fav'><img id="nofav" src="../images/heart_negro.png" alt=""></button>
+                </div>
+                <div class="container_price-agregar">
+                    <div class="container_precios">
+                        <span class="precio-sin-desc"> $${element.price+(element.price *element.porcDesc/100)}</span>
+                        <span class="precio-descuento"> $${element.price}</span>
+                    </div>
+                    <button onclick="agregarAlCarrito(${element.id})" class="btn_agregar_carrito"><img class="img_agregar_carrito" src="../images/add-to-basket.png" alt="Agregar al Carrito"></button>
+                </div>  
+            </div>
         </div>
         `
     })
     }
     else{lista_favs.innerHTML = `
-            <div class="carrito_vacio">
-                <h3>SU LISTA DE FAVORITOS ESTA VACÍA</h3>
+            <div class="favs_vacio">
+                <h3>SU LISTA DE FAVORITOS ESTÁ VACÍA</h3>
                 <span><a href="../index.html">IR AL INICIO</a></span>
             </div>
         `
     }
     cantidadFavs()
 }
-function capturarStorage() {
+function capturarStorageFavs() {
     return JSON.parse(localStorage.getItem('favs')) || []
 }
-function guardarStorage(favsNew) {
+function guardarStorageFavs(favsNew) {
     localStorage.setItem('favs', JSON.stringify(favsNew))
 }
 function cantidadFavs(array) {
-    let favs = capturarStorage()
+    let favs = capturarStorageFavs()
     burbujaFavs.innerHTML = favs.length
 }
 const heart = document.getElementById('asd')
@@ -50,17 +56,17 @@ function hola(){
     heart.src = '../images/add-cart.svg'
 }
 function agregarFavs(idParam) {
-    let favs = capturarStorage()
+    let favs = capturarStorageFavs()
     const productoEncontrado = products.find(e => e.id == idParam)
     if (isInFavs(idParam)) {
         Toastify({
-        text: "Producto ya agregado.",
+        text: "Producto ya agregado",
         style: {
             color: '#000',
             fontSize:'20px',
             fontFamily:'Staatliches, cursive',
             textAlign:'center',
-            width:'200px',
+            width:'207px',
         },
         duration: 1000,
         backgroundColor:'#d3b246',
@@ -74,39 +80,84 @@ function agregarFavs(idParam) {
             fontSize:'20px',
             fontFamily:'Staatliches, cursive',
             textAlign:'center',
-            width:'200px',
+            width:'207px',
         },
         duration: 1000,
         backgroundColor:'#d3b246',
     }).showToast();
         favs.push({...productoEncontrado, cantidad:1})
     }
-    guardarStorage(favs)
+    guardarStorageFavs(favs)
     mostrarFavs()
 }
 function eliminarProdFav(id) {
-    let favs = capturarStorage()
+    let favs = capturarStorageFavs()
+    Toastify({
+        text: "eliminado de favoritos",
+        style: {
+            color: '#000',
+            fontSize:'20px',
+            fontFamily:'Staatliches, cursive',
+            textAlign:'center',
+            width:'207px',
+        },
+        duration: 1000,
+        backgroundColor:'#d3b246',
+    }).showToast()
     const resultado = favs.filter((prod) => prod.id !== id);
-    guardarStorage(resultado)
+    guardarStorageFavs(resultado)
     mostrarFavs()
 }
+function eliminarListaFavs() {
+    let favs = capturarStorageFavs()
+    if(favs.length == 0){
+        Swal.fire({
+            title: 'Su lista de favoritos está vacía.',
+            confirmButtonColor: '#d3b246',
+        })
+    }
+    else{
+        Swal.fire({
+            title: '¿Desea vaciar su lista de favoritos?',
+            showCancelButton: true,
+            confirmButtonColor: '#d3b246',
+            cancelButtonColor: '#db0000',
+            confirmButtonText: 'Eliminar productos',
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let timerInterval
+                Swal.fire({
+                    title: 'Vaciando lista de favoritos.',
+                    html: 'Finaliza en <b></b> milisegundos.',
+                    timer: 1000,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                            b.textContent = Swal.getTimerLeft()
+                        }, 100)
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval)
+                    }
+                }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        localStorage.removeItem("favs")
+                        mostrarFavs()
+                    }
+                })
+            }
+        })
+    }
+}
 function isInFavs(id){
-    
-    let favs = capturarStorage()   
+    let favs = capturarStorageFavs()   
     return favs.some(e => e.id == id)
 }
 mostrarFavs()
 cantidadFavs()
 
-/* let img = document.getElementById('nofav')
-let fotoMostrada = 1
-function changeImg() {
-if(fotoMostrada == 1){
-    img.src = '../images/whatsapp.png'
-    fotoMostrada = 2
-}
-else if (fotoMostrada==2){
-    img.src = '../images/user.svg'
-    fotoMostrada = 1
-}
-} */
+//EVENTOS
+trash_favs.onclick = eliminarListaFavs

@@ -26,7 +26,7 @@
                 </ul>
             </div>
             <div class="barra_navegacion">
-                <input type="text">
+                <input type="text" id="input_search">
                 <button>
                     <img id="header-search" src="../images/search.svg" alt="">
                 </button>
@@ -34,11 +34,12 @@
             <div class="carrito_user-favs">
                 <a href="../pages/user.html"><img src="../images/user.svg" alt=""></a>
                 <button>
-                    <img src="../images/heart.svg" alt="">
+                    <a href="../pages/favs.html">
+                        <img src="../images/heart.svg" alt="">
+                    </a>                
                 </button>
                 <button><a href="../pages/carrito.html">
                     <img src="../images/shopping-bag.svg" alt="">
-                </a>
                 </button>
             </div>
         </nav>
@@ -51,9 +52,9 @@
                 <li>Conjuntos</li>
             </ul>
         </section>
-        <section class="seccion_accesorios">
-            <h1 class="title_accesorios">OUTFITS</h1>
-            <img src="../images/outfits.jpg" alt="">
+        <section class="seccion_img_title">
+            <h1 class="title_img">OUTFITS</h1>
+            <img src="../images/outfits.jpg" class="imgTopPage" alt="Outfits">
         </section>
         <div class="title_slider">
             <h2>¡OUTFITS MAS VENDIDOS!</h2>
@@ -64,7 +65,6 @@
             <div class="slide-content">
                 <div id="sliderProducts" class="card-wrapper swiper-wrapper">
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
         <div class="container_title-outfits">
@@ -73,14 +73,14 @@
         <section class="container-productos">
             <aside class="filtro_productos">
                 <h3 class="title-filtro">FILTROS</h3>
-                <div class="rango-precio">
-                    <span>PRECIO</span>
-                    <input type="range" name="" id="input_rango-precio" min="2000" max="50000">
-                    <div class="container_number-price">
-                        <input type="number" name="" id="">
-                        <p> | </p>
-                        <input type="number" name="" id="">
-                    </div>
+                <div class="container-categoria">
+                    <span>ORDENAR</span>
+                    <ul>
+                        <li id="orden_mayor_menor" class="categorias_item"><i class="fa-solid fa-arrow-down-a-z"></i> Nombre: A - Z</li>
+                        <li id="orden_menor_mayor" class="categorias_item"><i class="fa-solid fa-arrow-down-z-a"></i> Nombre: Z - A</li>
+                        <li id="precio_mayor_menor" class="categorias_item"><i class="fa-solid fa-arrow-down-short-wide"></i> Precio: Mayor - Menor</li>
+                        <li id="precio_menor_mayor" class="categorias_item"><i class="fa-solid fa-arrow-down-wide-short"></i> Precio: Menor - Mayor</li>
+                    </ul>
                 </div>
                 <div class="container-categoria">
                     <span>CATEGORÍA</span>

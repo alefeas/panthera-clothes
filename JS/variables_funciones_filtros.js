@@ -1,6 +1,10 @@
 //VARIABLES GENERALES
 const listaProductos= document.getElementById('lista_productos')
 const sliderProducts = document.getElementById('sliderProducts')
+let orden_mayor_menor = document.getElementById('orden_mayor_menor')
+let orden_menor_mayor = document.getElementById('orden_menor_mayor')
+let precio_mayor_menor = document.getElementById('precio_mayor_menor')
+let precio_menor_mayor = document.getElementById('precio_menor_mayor')
 
 //VARIABLES SECCIÓN HOMBRES
 let categoria_accesorios_hombres = document.getElementById('accesoriosHombres')
@@ -56,8 +60,8 @@ let botas_calzado = products.filter(objeto => objeto.category === "Botas" && obj
 
 //FUNCIONES (MOSTRAR PRODUCTOS)
 function mostrarProductos(arrayProductos) {
-    listaProductos.innerHTML = ''
-    arrayProductos.forEach(element => {
+        listaProductos.innerHTML = ''
+        arrayProductos.forEach(element => {
             listaProductos.innerHTML += `
             <div class="producto">
             <img class="img-producto" src="../images/${element.img}" alt="${element.name}">
@@ -80,7 +84,7 @@ function mostrarProductos(arrayProductos) {
             </div>
             `
         });
-    }
+}
 function mostrarProductosSlider(arrayProductos) {
     sliderProducts.innerHTML = ''
     arrayProductos.forEach(element => {

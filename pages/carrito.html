@@ -7,7 +7,7 @@
     <title>Carrito | Panthera</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <header>
@@ -39,7 +39,6 @@
                 </button>
                 <button><a href="#">
                     <img src="../images/shopping-bag.svg" alt="">
-                    <span id="numero_prod"></span>
                 </a>
                 </button>
             </div>
@@ -48,7 +47,7 @@
     <main>
         <section class="container_title-vaciar">
             <h1 class="title_carrito">TU CARRITO (<span id="burbujaCarrito"></span>)</h1>
-            <button id="trash">VACIAR <i class="fa-solid fa-trash-can"></i></button>
+            <button id="trash" class="trash">VACIAR <i class="fa-solid fa-trash-can"></i></button>
         </section>
         <section class="carrito">
             <section id="lista_carrito">
@@ -76,7 +75,7 @@
                 </div>
                 <div class="container_code-desc">
                     <input type="text" placeholder="Código de descuento" id="inputCode" class="codigo_desc">
-                    <button onclick="a()" id="btnDesc">asd</button>
+                    <button id="btnDesc"></button>
                 </div>
                 <div class="container_metodos">
                     <h4 class="title_metodos">metodos de pago</h4>
@@ -124,8 +123,11 @@
             <p>Desarrollado y diseñado por Alejo Feas Matej</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../JS/bd.js"></script>
     <script src="../JS/totalCarrito.js"></script>
+    <script src="../JS/burbuja.js"></script>
     <script src="../JS/carrito.js"></script>
     <script src="../JS/cargaPag.js"></script>
 </body>

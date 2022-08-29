@@ -47,7 +47,15 @@ function capturarStorage() {
 function guardarStorage(carritoNuevo) {
     localStorage.setItem('carrito', JSON.stringify(carritoNuevo))
 }
-function cantidadCarrito(array) {
+function cantidadCarrito() {
+    let carrito = capturarStorage()
+    const cantProds = carrito.reduce(
+    (acc, elem) => acc + elem.cantidad,    
+    0)
+    burbujaCarrito.innerHTML = cantProds
+}
+let burbujaCarritoConj
+function cantidadCarrito() {
     let carrito = capturarStorage()
     const cantProds = carrito.reduce(
     (acc, elem) => acc + elem.cantidad,    
@@ -63,7 +71,7 @@ function agregarAlCarrito(idParam) {
             fontSize:'20px',
             fontFamily:'Staatliches, cursive',
             textAlign:'center',
-            width:'200px',
+            width:'207px',
         },
         duration: 1000,
         backgroundColor:'#d3b246',
@@ -96,6 +104,18 @@ function eliminarProductoCarrito(id) {
     const resultado = carrito.filter((prod) => prod.id !== id);
     guardarStorage(resultado)
     mostrarCarrito()
+    Toastify({
+        text: "eliminado del carrito",
+        style: {
+            color: '#000',
+            fontSize:'20px',
+            fontFamily:'Staatliches, cursive',
+            textAlign:'center',
+            width:'207px',
+        },
+        duration: 1000,
+        backgroundColor:'#d3b246',
+    }).showToast();
 }
 function eliminarCarrito() {
     let carrito = capturarStorage()
@@ -141,6 +161,16 @@ function eliminarCarrito() {
         })
     }
 }
+function mostrarTotalCarrito() {
+    const carrito = capturarStorage()
+    const envio = 600
+    const total = carrito.reduce(
+    (acc, elem) => acc + elem.cantidad * elem.price,    
+    envio
+    )
+    totalCarrito.innerHTML ='$' + total
+    precio_entrega.innerHTML ='$' + envio
+}    
 mostrarCarrito()
 cantidadCarrito()
 

@@ -27,7 +27,7 @@
             </div>
             <div class="barra_navegacion">
                 <input type="text">
-                <button>
+                <button id="btn_search">
                     <img id="header-search" src="images/search.svg" alt="">
                 </button>
             </div>
@@ -46,45 +46,48 @@
         </nav>
     </header>
     <main>
-        <section class="container-slider">
-            <div class="slider" id="slider">
-                <h1>PANTHERA CLOTHES</h1>
-                <div class="slider__section">
-                    <img src="images/slider2.webp" alt="" class="slider__img">
-                </div>
-                <div class="slider__section">
-                    <img src="images/slider1.webp" alt="" class="slider__img">
-                </div>
-                <div class="slider__section">
-                    <img src="images/slider3.webp" alt="" class="slider__img">
-                </div>
-                <div class="slider__section">
-                    <img src="images/slider4.webp" alt="" class="slider__img">
-                </div>
-            </div>
-            <div class="slider__btn slider__btn--right" id="nxt-btn"><i class="fa-solid fa-chevron-right"></i></div>
-            <div class="slider__btn slider__btn--left" id="pre-btn"><i class="fa-solid fa-chevron-left"></i></div>
-        </section>
+        <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/slider2.webp" style="width:100%">
+            <div class="title_img_index">PANTHERA ELEGANT</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="images/slider1.webp" style="width:100%">
+            <div class="title_img_index">PANTHERA URBAN</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="images/slider4.webp" style="width:100%">
+            <div class="title_img_index">PANTHERA WINTER</div>
+        </div>
+        </div>
+        <br>
+        <div style="display:none;">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
         <section class="sectLinkImg">
             <div>
-                <a href=""><img class="imgLinkInicio" src="images/zapatillas.jpg" alt=""></a>
+                <a href="pages/conjuntos.html"><img class="imgLinkInicio" src="images/outfitvioleta.webp" alt=""></a>
+                
             </div>
             <div>
-                <a href=""><img class="imgLinkInicio" src="images/camperablanca.jpg" alt=""></a>
+                <a href="pages/hombres.html"><img class="imgLinkInicio" src="images/ropa_hombre.webp" alt=""></a>
+                
             </div>
             <div>
-                <img class="imgLinkInicio" onclick="hola()" src="images/outfitvioleta.jpg" alt="">
+                <a href="pages/mujeres.html"><img class="imgLinkInicio" src="images/camperablanca.webp" alt=""></a>
             </div>
             <div>
-                <a href=""><img class="imgLinkInicio" src="images/zapatillas.jpg" alt=""></a>
+                <a href="pages/calzado.html"><img class="imgLinkInicio" src="images/zapatillas.webp" alt=""></a>
             </div>
         </section>
         <div class="title_slider">
             <h2>¡DESCUENTOS HASTA EL 31/07!</h2>
         </div>
         <div class="slide-container swiper">
-            <div class="swiper-button-next swiper-btn"><i class="fa fa-chevron-right"></i></div>
-            <div class="swiper-button-prev swiper-btn"><i class="fa fa-chevron-left"></i></div>
+            <div class="swiper-button-next button swiper-btn"><i class="fa fa-chevron-right"></i></div>
+            <div class="swiper-button-prev button swiper-btn"><i class="fa fa-chevron-left"></i></div>
             <div class="slide-content">
                 <div id="sliderProducts" class="card-wrapper swiper-wrapper">
                 </div>
@@ -138,5 +141,6 @@
     <script src="JS/carrito.js"></script>
     <script src="JS/favs.js"></script>
     <script src="JS/cargaPag.js"></script>
+    <script src="JS/slideShow.js"></script>
 </body>
 </html>
